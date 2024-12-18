@@ -1,6 +1,6 @@
 "use client";
-import { CustomButton } from "@/components/buttons/button";
-import { CustomGrid } from "@/components/container/grid/grid";
+import { CustomButton } from "@/ui/buttons/button";
+import { CustomGrid } from "@/ui/grid/grid";
 import { FormFields } from "@/features/common-component-map/form-fields/form-fields";
 import { successSnackbar } from "@/libs/snackbar.lib";
 

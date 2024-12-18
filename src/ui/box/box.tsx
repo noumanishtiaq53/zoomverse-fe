@@ -4,11 +4,17 @@ export const CustomBox = (props: any) => {
   const {
     children,
     backgroundImage,
-    height = "100vh",
-    width = "100vw",
+    height = backgroundImage !== undefined ? "100vh" : "auto",
+    width = backgroundImage !== undefined ? "100vw" : "auto",
     backgroundSize = "cover",
     backgroundRepeat = "no-repeat",
+    color,
+    backgroundColor,
+    textAlign,
+    padding,
+    borderRadius,
   } = props;
+
   return (
     <Box
       sx={{
@@ -17,6 +23,11 @@ export const CustomBox = (props: any) => {
         width: width,
         backgroundSize: backgroundSize,
         backgroundRepeat: backgroundRepeat,
+        color: color,
+        backgroundColor: backgroundColor,
+        textAlign: textAlign,
+        padding: padding,
+        borderRadius: borderRadius,
       }}
     >
       {children}

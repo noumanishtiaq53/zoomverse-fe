@@ -4,7 +4,7 @@ export const CustomTextFields = (props: any) => {
   const {
     label = "",
     variant = "outlined",
-    size = "small",
+    size = "large",
     error = false,
     helperText = "",
     multiline = false,
@@ -14,6 +14,7 @@ export const CustomTextFields = (props: any) => {
     fullWidth = true,
     startIcon = undefined,
     endIcon = undefined,
+    required = false,
   } = props;
 
   return (
@@ -38,6 +39,7 @@ export const CustomTextFields = (props: any) => {
       onChange={onChange}
       onBlur={onBlur}
       fullWidth={fullWidth}
+      // required={required}
     />
   );
 };

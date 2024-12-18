@@ -10,7 +10,14 @@ export const CustomButton = (props: any) => {
     color = "primary",
     startIcon,
     endIcon,
+    fullWidth,
+    size = "large",
+    type = "button",
+    height,
+    borderRadius = 2,
   } = props;
+
+// const mappedHeight = 
 
   return (
     <Button
@@ -19,6 +26,14 @@ export const CustomButton = (props: any) => {
       endIcon={endIcon}
       color={color}
       onClick={() => handleClick?.()}
+      fullWidth={fullWidth}
+      size={size}
+      type={type}
+      disableElevation
+      sx={{
+        height: height,
+        borderRadius: borderRadius,
+      }}
     >
       {text}
     </Button>

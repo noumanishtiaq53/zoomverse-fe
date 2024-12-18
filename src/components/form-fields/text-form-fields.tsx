@@ -1,6 +1,8 @@
+"use client";
 import { Controller, useFormContext } from "react-hook-form";
-import { CustomTextFields } from "../fields/custom-text-fields";
+import { CustomTextFields } from "../../ui/fields/custom-text-fields";
 import { Typography } from "@mui/material";
+import { CustomTypography } from "@/ui/typography/typography";
 
 export const TextFormFields = (props: any) => {
   const { name, onBlurHandler, ...other } = props;
@@ -11,7 +13,7 @@ export const TextFormFields = (props: any) => {
     <Controller
       name={name}
       control={control}
-    //   defaultValue={other?.defaultValue || ""}
+      //   defaultValue={other?.defaultValue || ""}
       render={({ field, fieldState: { error } }) => (
         <>
           <CustomTextFields
@@ -25,14 +27,7 @@ export const TextFormFields = (props: any) => {
             error={!!error}
             startIcon={other?.startIcon}
             endIcon={other?.endIcon}
-            helperText={
-              <Typography
-                component={"span"}
-                sx={{ display: "block", mt: -1, ml: -1 }}
-              >
-                {error?.message}
-              </Typography>
-            }
+            helperText={<CustomTypography text={error?.message} />}
             {...other}
           />
         </>

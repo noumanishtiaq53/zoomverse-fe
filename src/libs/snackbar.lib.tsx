@@ -1,5 +1,5 @@
 "use client";
-import { MESSAGES } from "@/constants/messages.contant";
+import { MESSAGES } from "@/constants/messages.constant";
 import { toast } from "react-toastify";
 
 export const successSnackbar = (message = MESSAGES?.SUCCESS) => {

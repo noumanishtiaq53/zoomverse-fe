@@ -11,6 +11,13 @@ export const CustomGrid = (props: any) => {
     xl = 6,
     spacing,
     size = undefined,
+    display,
+    justifyContent,
+    alignItems,
+    minHeight,
+    maxWidth,
+    margin = maxWidth !== undefined ? "auto" : 0,
+    padding = 0
   } = props;
 
   return (
@@ -23,6 +30,15 @@ export const CustomGrid = (props: any) => {
             spacing: spacing,
           }
         : { size: size ?? { xs: 12, md, lg, xl } })}
+      sx={{
+        display: display,
+        justifyContent: justifyContent,
+        alignItems: alignItems,
+        minHeight: minHeight,
+        maxWidth: maxWidth,
+        margin: margin,
+        padding: padding
+      }}
     >
       {children}
     </Grid2>

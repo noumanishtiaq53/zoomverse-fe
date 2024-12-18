@@ -1,14 +1,9 @@
-import { BgAuthImage } from "@/assets/images";
-import { CustomBox } from "@/components/container/box/box";
+import { AuthLayout } from "@/layouts/auth-layout/auth-layout";
 
-export const AuthLayout = (props: any) => {
+export const AuthRootLayout = (props: any) => {
   const { children } = props;
 
-  return (
-    <CustomBox backgroundImage={`url(${BgAuthImage?.src})`}>
-      {children}
-    </CustomBox>
-  );
+  return <AuthLayout>{children}</AuthLayout>;
 };
 
-export default AuthLayout;
+export default AuthRootLayout;

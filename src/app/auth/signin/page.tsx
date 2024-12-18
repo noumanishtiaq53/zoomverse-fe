@@ -1,10 +1,7 @@
+import { SigninFeature } from "@/features/auth/signin/signin.feature";
+
 const SigninPage = () => {
-    return (
-      <>
-        123
-      </>
-    );
-  };
-  
-  export default SigninPage;
-  
+  return <SigninFeature />;
+};
+
+export default SigninPage;
