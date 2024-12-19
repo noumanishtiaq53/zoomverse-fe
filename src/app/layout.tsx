@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Rajdhani } from "next/font/google";
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
 import { SnackBarProvider } from "@/providers/snackbar.provider";
 import { MuiThemeProvider } from "@/providers/mui.theme.provider";
 
@@ -28,7 +29,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <MuiThemeProvider>
-          <SnackBarProvider>{children}</SnackBarProvider>
+          <SnackBarProvider>
+            {children}
+            </SnackBarProvider>
         </MuiThemeProvider>
       </body>
     </html>

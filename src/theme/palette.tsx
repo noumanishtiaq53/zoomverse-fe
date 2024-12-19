@@ -1,6 +1,7 @@
 const common = {
   white: "#ffffff",
   black: "#000000",
+  darkViolet: "#4e4ac8"
 };
 
 const primary = {
@@ -10,6 +11,7 @@ const primary = {
 const secondary = {
   main: "#23d2e2",
 };
+
 
 export const palette = {
   common,

@@ -25,3 +25,5 @@ export const CheckboxFormField = (props: any) => {
     />
   );
 };
+
+export default CheckboxFormField;

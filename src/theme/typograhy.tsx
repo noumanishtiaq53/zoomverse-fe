@@ -43,17 +43,18 @@ export const typography = {
     fontSize: pxToRem(16),
     fontWeight: 400,
   },
-  subtitle2: {
-    fontSize: pxToRem(16),
-    fontWeight: 400,
+  subtitle2: {  // for help text
+    fontSize: pxToRem(14),
+    fontWeight: 500,
   },
-  caption: {
-    fontSize: pxToRem(16),
-    fontWeight: 400,
+  caption: { 
+    fontSize: pxToRem(14),
+    fontWeight: 500,
   },
-  overline: {
-    fontSize: pxToRem(16),
-    fontWeight: 400,
+  overline: {  // for link text
+    fontSize: pxToRem(14),
+    fontWeight: 600,
+    textTransform: "none",
   },
   button: {
     fontSize: pxToRem(14),

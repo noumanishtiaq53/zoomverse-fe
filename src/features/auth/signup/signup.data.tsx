@@ -6,7 +6,7 @@ export const signupFormFieldsDefaultValuesDynamic = {
   email: "",
   userName: "",
   password: "",
-  confirmPassword: "",
+  repeatPassword: "",
   canSendUpdates: false,
 };
 
@@ -14,6 +14,9 @@ export const signupFormFieldsValidationSchemaDynamic = Yup?.object()?.shape({
   email: Yup?.string()?.trim()?.required("Username is required"),
   userName: Yup?.string()?.trim()?.required("Email is required"),
   password: Yup?.string()?.trim()?.required("Password is required"),
+  repeatPassword: Yup?.string()
+    ?.trim()
+    ?.required("Repeat password is required"),
 });
 
 export const signupFormFieldsDynamic = () => [
@@ -48,7 +51,7 @@ export const signupFormFieldsDynamic = () => [
     id: 4,
     component: TextFormFields,
     componentProps: {
-      name: "confirmPassword",
+      name: "repeatPassword",
       label: "Repeat Password",
       required: true,
     },

@@ -13,6 +13,13 @@ export const CustomBox = (props: any) => {
     textAlign,
     padding,
     borderRadius,
+    display,
+    justifyContent,
+    alignItems,
+    minHeight,
+    flexDirection,
+    gap,
+    maxWidth,
   } = props;
 
   return (
@@ -28,6 +35,13 @@ export const CustomBox = (props: any) => {
         textAlign: textAlign,
         padding: padding,
         borderRadius: borderRadius,
+        display,
+        justifyContent,
+        alignItems,
+        minHeight,
+        flexDirection,
+        gap,
+        maxWidth
       }}
     >
       {children}

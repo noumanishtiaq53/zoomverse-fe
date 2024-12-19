@@ -15,6 +15,10 @@ export const CustomTextFields = (props: any) => {
     startIcon = undefined,
     endIcon = undefined,
     required = false,
+    placeholder,
+    backgroundColor,
+    borderRadius,
+    border,
   } = props;
 
   return (
@@ -39,6 +43,16 @@ export const CustomTextFields = (props: any) => {
       onChange={onChange}
       onBlur={onBlur}
       fullWidth={fullWidth}
+      placeholder={placeholder}
+      sx={{
+        backgroundColor,
+        borderRadius,
+        border,
+        "& .MuiTextField-root": {
+          border,
+        },
+        "& fieldset": { border },
+      }}
       // required={required}
     />
   );
