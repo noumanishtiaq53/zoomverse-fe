@@ -19,6 +19,7 @@ export const CustomTextFields = (props: any) => {
     backgroundColor,
     borderRadius,
     border,
+    color,
   } = props;
 
   return (
@@ -51,9 +52,11 @@ export const CustomTextFields = (props: any) => {
         "& .MuiTextField-root": {
           border,
         },
+        "& .MuiInputBase-root": {
+          color,
+        },
         "& fieldset": { border },
       }}
-      // required={required}
     />
   );
 };

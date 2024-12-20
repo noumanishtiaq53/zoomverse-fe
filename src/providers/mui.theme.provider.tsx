@@ -1,5 +1,6 @@
 "use client";
 import { palette } from "@/theme/palette";
+import { shadows } from "@/theme/shadows";
 import { typography } from "@/theme/typograhy";
 import { Theme } from "@emotion/react";
 import {
@@ -14,6 +15,7 @@ export const MuiThemeProvider = (props: any) => {
   const themeOptions: Theme = {
     palette,
     typography,
+    shadows,
     spacing: 10,
     shape: { borderRadius: 4 },
   };

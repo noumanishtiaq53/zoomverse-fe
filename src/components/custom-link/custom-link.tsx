@@ -8,13 +8,14 @@ export const CustomLink = (props: ICustomLinkProps) => {
     linkText,
     component = "span",
     textColor = "secondary.main",
+    variant = "overline",
   } = props;
   return (
     <Link href={linkRoute}>
       <CustomTypography
         component={component}
         text={linkText}
-        variant="overline"
+        variant={variant}
         textColor={textColor}
       />
     </Link>

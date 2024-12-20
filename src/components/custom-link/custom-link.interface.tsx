@@ -5,4 +5,5 @@ export interface ICustomLinkProps {
   linkRoute?: string;
   component?: string;
   textColor?: string;
+  variant?: string;
 }

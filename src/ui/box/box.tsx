@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 
 export const CustomBox = (props: any) => {
@@ -20,6 +21,13 @@ export const CustomBox = (props: any) => {
     flexDirection,
     gap,
     maxWidth,
+    paddingX,
+    boxShadow,
+    paddingY,
+    onMouseOver,
+    onMouseOut,
+    hoverStyles,
+    customStyles,
   } = props;
 
   return (
@@ -41,8 +49,17 @@ export const CustomBox = (props: any) => {
         minHeight,
         flexDirection,
         gap,
-        maxWidth
+        maxWidth,
+        paddingX,
+        boxShadow,
+        paddingY,
+        ...customStyles,
+        "&:hover": {
+          ...hoverStyles,
+        },
       }}
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
     >
       {children}
     </Box>

@@ -1,11 +1,12 @@
-export const CustomIcons = (props: any) => {
-  const { Icon, iconColor, hoverIcon } = props;
+export const CustomIcon = (props: any) => {
+  const { Icon, iconColor, hoverColor, hasAction = false } = props;
   return (
     <Icon
       sx={{
         color: iconColor,
+        cursor: hasAction ? "pointer" : "",
         "&:hover": {
-          color: hoverIcon,
+          color: hoverColor,
         },
       }}
     />

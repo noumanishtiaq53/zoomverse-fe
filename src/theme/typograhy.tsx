@@ -28,8 +28,8 @@ export const typography = {
     fontWeight: 600,
   },
   h6: {
-    fontSize: pxToRem(16),
-    fontWeight: 500,
+    fontSize: pxToRem(14), //used
+    fontWeight: 700,
   },
   body1: {
     fontSize: pxToRem(16),
@@ -43,15 +43,17 @@ export const typography = {
     fontSize: pxToRem(16),
     fontWeight: 400,
   },
-  subtitle2: {  // for help text
+  subtitle2: {
+    // for help text
     fontSize: pxToRem(14),
     fontWeight: 500,
   },
-  caption: { 
+  caption: {
     fontSize: pxToRem(14),
     fontWeight: 500,
   },
-  overline: {  // for link text
+  overline: {
+    // for link text
     fontSize: pxToRem(14),
     fontWeight: 600,
     textTransform: "none",

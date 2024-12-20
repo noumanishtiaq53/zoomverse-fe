@@ -1,13 +1,13 @@
 "use client";
 import { CustomTextFields } from "@/ui/fields/custom-text-fields";
-import { useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
+import { CustomIcon } from "@/ui/custom-icons/custom-icons";
+import { UISearchIcon } from "@/assets/ui-icons";
 
 export const CustomSearch = (props: any) => {
   const { setSearch, search, placeholder } = props;
 
   const handleSearch = (e: any) => {
-    setSearch(e?.target?.value);
+    setSearch?.(e?.target?.value);
   };
 
   return (
@@ -15,11 +15,12 @@ export const CustomSearch = (props: any) => {
       label=""
       onChange={handleSearch}
       value={search}
-      endIcon={<SearchIcon />}
+      endIcon={<CustomIcon Icon={UISearchIcon} iconColor="primary.light" />}
       placeholder={placeholder}
-      backgroundColor={"common.darkViolet"}
+      backgroundColor={"primary.dark"}
       borderRadius={2}
       border="none"
+      color="common.white"
     />
   );
 };

@@ -5,7 +5,7 @@ export const CustomTypography = (props: any) => {
     text,
     variant,
     component,
-    color,
+    color = "",
     textColor,
     margin,
     marginY,
