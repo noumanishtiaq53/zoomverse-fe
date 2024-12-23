@@ -27,7 +27,9 @@ export const TextFormFields = (props: any) => {
             error={!!error}
             startIcon={other?.startIcon}
             endIcon={other?.endIcon}
-            helperText={<CustomTypography text={error?.message} />}
+            helperText={
+              <CustomTypography component="span" text={error?.message} />
+            }
             {...other}
           />
         </>

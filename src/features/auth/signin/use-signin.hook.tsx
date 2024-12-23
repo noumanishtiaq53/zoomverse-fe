@@ -16,7 +16,7 @@ export const useSignin = () => {
   };
 
   const { methods, handleSubmit } = useFormLib(formLibHookProps);
-  console.log(methods);
+
   const submitSigninForm = (data: any) => {
     console.log(data);
   };

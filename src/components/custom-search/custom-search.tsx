@@ -1,6 +1,6 @@
 "use client";
 import { CustomTextFields } from "@/ui/fields/custom-text-fields";
-import { CustomIcon } from "@/ui/custom-icons/custom-icons";
+import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
 import { UISearchIcon } from "@/assets/ui-icons";
 
 export const CustomSearch = (props: any) => {
@@ -15,7 +15,12 @@ export const CustomSearch = (props: any) => {
       label=""
       onChange={handleSearch}
       value={search}
-      endIcon={<CustomIcon Icon={UISearchIcon} iconColor="primary.light" />}
+      endIcon={
+        <CustomIconUI
+          Icon={UISearchIcon}
+          customStyles={{ color: "primary.light" }}
+        />
+      }
       placeholder={placeholder}
       backgroundColor={"primary.dark"}
       borderRadius={2}

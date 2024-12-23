@@ -1,4 +1,4 @@
-import { CustomBox } from "@/ui/box/box";
+import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { RightSideBar } from "./right-sidebar/right-sidebar";
 import { LeftSideBar } from "./left-sidebar/left-sidebar";
 import { Header } from "./header/header";
@@ -9,10 +9,10 @@ export const MainLayout = (props: any) => {
 
   return (
     <>
-      <CustomBox display="flex" flexDirection="column" minHeight="100vh">
-        <CustomBox>
+      <CustomBoxUI>
+        <CustomBoxUI>
           <Header />
-        </CustomBox>
+        </CustomBoxUI>
         <CustomGrid isContainer>
           <CustomGrid size="auto">
             <LeftSideBar />
@@ -22,7 +22,7 @@ export const MainLayout = (props: any) => {
             <RightSideBar />
           </CustomGrid>
         </CustomGrid>
-      </CustomBox>
+      </CustomBoxUI>
     </>
   );
 };

@@ -15,9 +15,11 @@ export const CustomButton = (props: any) => {
     type = "button",
     height,
     borderRadius = 2,
+    customStyles,
+    hoverStyles,
   } = props;
 
-// const mappedHeight = 
+  // const mappedHeight =
 
   return (
     <Button
@@ -33,6 +35,10 @@ export const CustomButton = (props: any) => {
       sx={{
         height: height,
         borderRadius: borderRadius,
+        ...customStyles,
+        "&:hover": {
+          ...hoverStyles,
+        },
       }}
     >
       {text}

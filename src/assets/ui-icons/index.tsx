@@ -13,5 +13,6 @@ export { default as UIBadgeIcon } from "@mui/icons-material/MilitaryTech";
 export { default as UIQuestIcon } from "@mui/icons-material/Grade";
 export { default as UIStreamIcon } from "@mui/icons-material/Tv";
 export { default as UIEventIcon } from "@mui/icons-material/Event";
-export { default as UIForumIcon } from '@mui/icons-material/Forum';
-export { default as UIMarketplaceIcon } from '@mui/icons-material/Store';
+export { default as UIForumIcon } from "@mui/icons-material/Forum";
+export { default as UIMarketplaceIcon } from "@mui/icons-material/Store";
+export { default as UIBoltIcon } from "@mui/icons-material/Bolt";

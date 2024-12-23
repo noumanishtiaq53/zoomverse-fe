@@ -64,4 +64,12 @@ export const typography = {
     textTransform: "none",
     height: pxToRem(54),
   },
+  logoText: {
+    ...responsiveFontSizes({ xs: 20, md: 26 }),
+    fontWeight: 700,
+  },
+  avatarInitial: {
+    fontSize: pxToRem(12),
+    fontWeight: 600,
+  },
 };

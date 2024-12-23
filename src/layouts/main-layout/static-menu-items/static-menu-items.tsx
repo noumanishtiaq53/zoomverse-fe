@@ -1,8 +1,8 @@
 import { CustomLink } from "@/components/custom-link/custom-link";
 import { Fragment } from "react";
 import { primaryMenuItemsData } from "./static-menu-items.data";
-import { CustomBox } from "@/ui/box/box";
-import { CustomIcon } from "@/ui/custom-icons/custom-icons";
+import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
+import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
 import { CustomTypography } from "@/ui/typography/typography";
 
 export const StaticMenuItems = (props: any) => {
@@ -16,38 +16,48 @@ export const StaticMenuItems = (props: any) => {
 
   return (
     <>
-      <CustomBox
-        display="flex"
-        gap={3}
-        alignItems={alignItems}
-        flexDirection={flexDirection}
+      <CustomBoxUI
+        customStyles={{
+          display: "flex",
+          gap: 3,
+          alignItems: alignItems,
+          flexDirection: flexDirection,
+        }}
       >
         {menuItemsData?.map((menuItem: any) => (
           <Fragment key={menuItem?._id}>
             <CustomLink
               linkText={
                 menuItem?.icon ? (
-                  <CustomBox
+                  <CustomBoxUI
                     key={menuItem?._id}
-                    display="flex"
-                    alignItems="center"
-                    gap={3}
+                    customStyles={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 3,
+                    }}
                   >
                     {(isIconMenu || menuItem?.hasIcon) && (
-                      <CustomBox
-                        display="flex"
-                        justifyContent="center"
-                        alignItems="center"
+                      <CustomBoxUI
+                        customStyles={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
                       >
-                        <CustomIcon
+                        <CustomIconUI
                           Icon={menuItem?.icon}
-                          iconColor="primary.light"
-                          hoverColor="common.white"
+                          customStyles={{
+                            color: "primary.light",
+                          }}
+                          hoverStyles={{
+                            color: "common.white",
+                          }}
                         />
-                      </CustomBox>
+                      </CustomBoxUI>
                     )}
                     <CustomTypography text={menuItem?.name} />
-                  </CustomBox>
+                  </CustomBoxUI>
                 ) : (
                   menuItem?.name
                 )
@@ -58,7 +68,7 @@ export const StaticMenuItems = (props: any) => {
             />
           </Fragment>
         ))}
-      </CustomBox>
+      </CustomBoxUI>
     </>
   );
 };

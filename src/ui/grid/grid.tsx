@@ -17,7 +17,9 @@ export const CustomGrid = (props: any) => {
     minHeight,
     maxWidth,
     margin = maxWidth !== undefined ? "auto" : 0,
-    padding = 0
+    padding = 0,
+    customStyles,
+    hoverStyles,
   } = props;
 
   return (
@@ -37,7 +39,11 @@ export const CustomGrid = (props: any) => {
         minHeight: minHeight,
         maxWidth: maxWidth,
         margin: margin,
-        padding: padding
+        padding: padding,
+        ...customStyles,
+        "&:hover": {
+          ...hoverStyles,
+        },
       }}
     >
       {children}

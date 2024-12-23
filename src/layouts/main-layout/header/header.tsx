@@ -1,21 +1,22 @@
-import { CustomBox } from "@/ui/box/box";
+import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { CustomTypography } from "@/ui/typography/typography";
 import { pxToRem } from "@/utils/css.utils";
 import { StaticMenuItems } from "../static-menu-items/static-menu-items";
 import { CustomSearch } from "@/components/custom-search/custom-search";
-import { CustomIcon } from "@/ui/custom-icons/custom-icons";
+import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
 import { UIGridViewIcon, UISettingsIcon } from "@/assets/ui-icons";
 import { onlyIconMenuItemsData } from "../static-menu-items/static-menu-items.data";
+import { CustomLogo } from "@/components/custom-logo/custom-logo";
 
 export const Header = () => {
   return (
-    <CustomBox
+    <CustomBoxUI
       customStyles={{
         backgroundColor: "primary.main",
         padding: 2,
       }}
     >
-      <CustomBox
+      <CustomBoxUI
         customStyles={{
           display: "flex",
           alignItems: "center",
@@ -23,27 +24,35 @@ export const Header = () => {
           gap: 3,
         }}
       >
-        <CustomTypography text="Flash0Verse" />
-        <CustomIcon
+        <CustomLogo/>
+        <CustomIconUI
           Icon={UIGridViewIcon}
-          iconColor="primary.light"
-          hoverColor="common.white"
+          customStyles={{
+            color: "primary.light",
+          }}
+          hoverStyles={{
+            color: "common.white",
+          }}
           hasAction
         />
         <StaticMenuItems />
-        <CustomBox
+        <CustomBoxUI
           customStyles={{
             width: pxToRem(700),
           }}
         >
           <CustomSearch placeholder="Search here for people and groups" />
-        </CustomBox>
+        </CustomBoxUI>
         <StaticMenuItems
           menuItemsData={onlyIconMenuItemsData}
           isIconMenu={true}
         />
-        <CustomIcon Icon={UISettingsIcon} iconColor="common.white" hasAction />
-      </CustomBox>
-    </CustomBox>
+        <CustomIconUI
+          Icon={UISettingsIcon}
+          customStyles={{ color: "common.white" }}
+          hasAction
+        />
+      </CustomBoxUI>
+    </CustomBoxUI>
   );
 };

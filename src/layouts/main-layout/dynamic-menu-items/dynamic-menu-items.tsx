@@ -1,8 +1,8 @@
 "use client";
 import { primarySidebarMenuItemsData } from "./dynamic-menu-items.data";
 import { CustomLink } from "@/components/custom-link/custom-link";
-import { CustomBox } from "@/ui/box/box";
-import { CustomIcon } from "@/ui/custom-icons/custom-icons";
+import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
+import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
 import { CustomTypography } from "@/ui/typography/typography";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -20,7 +20,7 @@ export const DynamicMenuItems = (props: any) => {
   return (
     <>
       {menuItemsData?.map((menuItem: any) => (
-        <CustomBox
+        <CustomBoxUI
           key={menuItem?._id}
           customStyles={{
             paddingY: 1,
@@ -45,7 +45,7 @@ export const DynamicMenuItems = (props: any) => {
           <CustomLink
             linkText={
               <>
-                <CustomBox
+                <CustomBoxUI
                   key={menuItem?._id}
                   customStyles={{
                     display: "flex",
@@ -55,30 +55,28 @@ export const DynamicMenuItems = (props: any) => {
                   }}
                 >
                   {(isIconMenu || menuItem?.hasIcon) && (
-                    <CustomBox
+                    <CustomBoxUI
                       customStyles={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                       }}
                     >
-                      <CustomIcon
+                      <CustomIconUI
                         Icon={menuItem?.icon}
-                        iconColor={
-                          pathname === menuItem?.route
-                            ? "common.white"
-                            : isHovered === menuItem?._id
-                            ? "secondary.main"
-                            : "grey.0"
-                        }
-                        hoverColor={
-                          isHovered ? "secondary.main" : "secondary.main"
-                        }
+                        customStyles={{
+                          color:
+                            pathname === menuItem?.route
+                              ? "common.white"
+                              : isHovered === menuItem?._id
+                              ? "secondary.main"
+                              : "grey.0",
+                        }}
                       />
-                    </CustomBox>
+                    </CustomBoxUI>
                   )}
                   <CustomTypography text={menuItem?.name} variant="h6" />
-                </CustomBox>
+                </CustomBoxUI>
               </>
             }
             linkRoute={menuItem?.route}
@@ -86,7 +84,7 @@ export const DynamicMenuItems = (props: any) => {
               pathname === menuItem?.route ? "common.white" : "primary"
             }
           />
-        </CustomBox>
+        </CustomBoxUI>
       ))}
     </>
   );

@@ -10,6 +10,8 @@ export const CustomTypography = (props: any) => {
     margin,
     marginY,
     textAlign,
+    customStyles,
+    hoverStyles,
   } = props;
 
   //FOR LATER: const marginApplied = `${marginTop} ${margin}`
@@ -24,6 +26,10 @@ export const CustomTypography = (props: any) => {
         margin: margin,
         marginY: marginY,
         textAlign: textAlign,
+        ...customStyles,
+        "&:hover": {
+          ...hoverStyles,
+        },
       }}
     >
       {text}

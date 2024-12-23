@@ -1,7 +1,8 @@
 import { Avatar } from "@mui/material";
 import { CustomTypography } from "../typography/typography";
+import { pxToRem } from "@/utils/css.utils";
 
-export const CustomAvatar = (props: any) => {
+export const CustomAvatarUI = (props: any) => {
   const {
     src,
     alt,
@@ -11,20 +12,29 @@ export const CustomAvatar = (props: any) => {
     variant = "circular",
     avatarInitial,
     margin = "auto",
+    customStyles,
+    hoverStyles,
   } = props;
+
   return (
     <Avatar
       src={src}
       alt={alt}
       sx={{
-        width: width,
-        height: height,
+        width: pxToRem(width),
+        height: pxToRem(height),
         backgroundColor: backgroundColor,
         margin: margin,
+        ...customStyles,
+        "&:hover": {
+          ...hoverStyles,
+        },
       }}
       variant={variant}
     >
-      {avatarInitial && <CustomTypography text={avatarInitial} />}
+      {avatarInitial && (
+        <CustomTypography text={avatarInitial} variant="avatarInitial" />
+      )}
     </Avatar>
   );
 };
