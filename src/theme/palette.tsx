@@ -16,7 +16,7 @@ const secondary = {
 const text = {
   primary: "#3e3f5e",
   secondary: "#8f91ac",
-  disabled: "#8f91ac",
+  disabled: "#adafca",
 };
 
 const background = {
@@ -27,11 +27,15 @@ const grey = {
   0: "#adafca"
 }
 
+const divider = '#eaeaf5'
+
+
 export const palette = {
   common,
   primary,
   secondary,
   text,
   background,
-  grey
+  grey,
+  divider
 };

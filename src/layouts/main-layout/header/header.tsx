@@ -1,5 +1,5 @@
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
-import { CustomTypography } from "@/ui/typography/typography";
+import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
 import { pxToRem } from "@/utils/css.utils";
 import { StaticMenuItems } from "../static-menu-items/static-menu-items";
 import { CustomSearch } from "@/components/custom-search/custom-search";

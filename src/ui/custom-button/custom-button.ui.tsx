@@ -2,7 +2,7 @@
 
 import { Button } from "@mui/material";
 
-export const CustomButton = (props: any) => {
+export const CustomButtonUI = (props: any) => {
   const {
     handleClick,
     text,

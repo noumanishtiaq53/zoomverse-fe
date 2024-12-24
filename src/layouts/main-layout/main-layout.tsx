@@ -2,7 +2,7 @@ import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { RightSideBar } from "./right-sidebar/right-sidebar";
 import { LeftSideBar } from "./left-sidebar/left-sidebar";
 import { Header } from "./header/header";
-import { CustomGrid } from "@/ui/grid/grid";
+import { CustomGridUI } from "@/ui/custom-grid/custom-grid.ui";
 
 export const MainLayout = (props: any) => {
   const { children } = props;
@@ -13,15 +13,15 @@ export const MainLayout = (props: any) => {
         <CustomBoxUI>
           <Header />
         </CustomBoxUI>
-        <CustomGrid isContainer>
-          <CustomGrid size="auto">
+        <CustomGridUI isContainer>
+          <CustomGridUI size="auto">
             <LeftSideBar />
-          </CustomGrid>
-          <CustomGrid size="grow">{children}</CustomGrid>
-          <CustomGrid size="auto">
+          </CustomGridUI>
+          <CustomGridUI size="grow">{children}</CustomGridUI>
+          <CustomGridUI size="auto">
             <RightSideBar />
-          </CustomGrid>
-        </CustomGrid>
+          </CustomGridUI>
+        </CustomGridUI>
       </CustomBoxUI>
     </>
   );

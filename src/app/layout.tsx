@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Rajdhani } from "next/font/google";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import { SnackBarProvider } from "@/providers/snackbar.provider";
-import { MuiThemeProvider } from "@/providers/mui.theme.provider";
+import { MuiThemeProvider } from "@/providers/mui-theme.provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

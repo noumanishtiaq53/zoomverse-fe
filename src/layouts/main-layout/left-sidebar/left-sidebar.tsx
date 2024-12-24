@@ -1,12 +1,12 @@
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { DynamicMenuItems } from "../dynamic-menu-items/dynamic-menu-items";
-import { ProfileImageCard } from "@/components/custom-cards/profile-image-card/profile-image-card";
+import { ProfileBioImages } from "@/components/custom-images/profile-bio-images/profile-bio-images";
 import { PROFILE_AVATAR_DIMENSIONS_TYPES } from "@/constants/dimensions.constant";
 
 export const LeftSideBar = () => {
   return (
     <>
-      <ProfileImageCard
+      <ProfileBioImages
         profileDimension={PROFILE_AVATAR_DIMENSIONS_TYPES?.MEDIUM}
       />
       <CustomBoxUI

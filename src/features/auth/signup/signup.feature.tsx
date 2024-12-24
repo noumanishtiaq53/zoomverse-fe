@@ -1,9 +1,9 @@
 "use client";
 
-import { CustomGrid } from "@/ui/grid/grid";
-import { CustomFormProvider } from "@/providers/custom-form-provider";
-import { CustomTypography } from "@/ui/typography/typography";
-import { CustomButton } from "@/ui/buttons/button";
+import { CustomGridUI } from "@/ui/custom-grid/custom-grid.ui";
+import { CustomFormProvider } from "@/providers/custom-form.provider";
+import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
+import { CustomButtonUI } from "@/ui/custom-button/custom-button.ui";
 import { useSignup } from "./use-signup.hook";
 import { CustomLink } from "@/components/custom-link/custom-link";
 import { ROUTES } from "@/constants/routes.constant";
@@ -14,7 +14,7 @@ export const SignupFeature = () => {
 
   return (
     <>
-      <CustomTypography
+      <CustomTypographyUI
         textAlign="center"
         text="Create your Account"
         variant="h3"
@@ -24,17 +24,17 @@ export const SignupFeature = () => {
         methods={methods}
         onSubmit={handleSubmit(submitSignupForm)}
       >
-        <CustomGrid isContainer spacing={2}>
+        <CustomGridUI isContainer spacing={2}>
           {signupFormFields?.map((formField: any) => (
-            <CustomGrid md={12} lg={12} xl={12} key={formField?.id}>
+            <CustomGridUI md={12} lg={12} xl={12} key={formField?.id}>
               <formField.component {...formField?.componentProps} />
-            </CustomGrid>
+            </CustomGridUI>
           ))}
-        </CustomGrid>
+        </CustomGridUI>
         <br />
-        <CustomButton type="submit" text="Register Now" fullWidth />
+        <CustomButtonUI type="submit" text="Register Now" fullWidth />
         <br />
-        <CustomTypography
+        <CustomTypographyUI
           text={
             <>
               You'll receive a confirmation email in your inbox with a link to

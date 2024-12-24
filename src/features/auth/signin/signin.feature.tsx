@@ -1,10 +1,10 @@
 "use client";
 
-import { CustomGrid } from "@/ui/grid/grid";
+import { CustomGridUI } from "@/ui/custom-grid/custom-grid.ui";
 import { useSignin } from "./use-signin.hook";
-import { CustomFormProvider } from "@/providers/custom-form-provider";
-import { CustomTypography } from "@/ui/typography/typography";
-import { CustomButton } from "@/ui/buttons/button";
+import { CustomFormProvider } from "@/providers/custom-form.provider";
+import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
+import { CustomButtonUI } from "@/ui/custom-button/custom-button.ui";
 import { CustomLink } from "@/components/custom-link/custom-link";
 import { ROUTES } from "@/constants/routes.constant";
 
@@ -14,7 +14,7 @@ export const SigninFeature = () => {
 
   return (
     <>
-      <CustomTypography
+      <CustomTypographyUI
         textAlign="center"
         text="Account Login"
         variant="h3"
@@ -24,17 +24,17 @@ export const SigninFeature = () => {
         methods={methods}
         onSubmit={handleSubmit(submitSigninForm)}
       >
-        <CustomGrid isContainer spacing={2}>
+        <CustomGridUI isContainer spacing={2}>
           {signinFormFields?.map((formField: any) => (
-            <CustomGrid md={12} lg={12} xl={12} key={formField?.id}>
+            <CustomGridUI md={12} lg={12} xl={12} key={formField?.id}>
               <formField.component {...formField?.componentProps} />
-            </CustomGrid>
+            </CustomGridUI>
           ))}
-        </CustomGrid>
+        </CustomGridUI>
         <br />
-        <CustomButton type="submit" text="Login to your Account" fullWidth />
+        <CustomButtonUI type="submit" text="Login to your Account" fullWidth />
         <br />
-        <CustomTypography
+        <CustomTypographyUI
           textAlign="center"
           text={
             <>

@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-export const CustomTypography = (props: any) => {
+export const CustomTypographyUI = (props: any) => {
   const {
     text,
     variant,

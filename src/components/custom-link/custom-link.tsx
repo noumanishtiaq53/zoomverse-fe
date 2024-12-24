@@ -1,4 +1,4 @@
-import { CustomTypography } from "@/ui/typography/typography";
+import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
 import Link from "next/link";
 import { ICustomLinkProps } from "./custom-link.interface";
 
@@ -8,11 +8,11 @@ export const CustomLink = (props: ICustomLinkProps) => {
     linkText,
     component = "span",
     textColor = "secondary.main",
-    variant = "overline",
+    variant = "linkText",
   } = props;
   return (
     <Link href={linkRoute}>
-      <CustomTypography
+      <CustomTypographyUI
         component={component}
         text={linkText}
         variant={variant}

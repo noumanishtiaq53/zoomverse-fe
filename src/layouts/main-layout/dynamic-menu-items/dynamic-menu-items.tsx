@@ -3,7 +3,7 @@ import { primarySidebarMenuItemsData } from "./dynamic-menu-items.data";
 import { CustomLink } from "@/components/custom-link/custom-link";
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
-import { CustomTypography } from "@/ui/typography/typography";
+import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -75,7 +75,7 @@ export const DynamicMenuItems = (props: any) => {
                       />
                     </CustomBoxUI>
                   )}
-                  <CustomTypography text={menuItem?.name} variant="h6" />
+                  <CustomTypographyUI text={menuItem?.name} variant="h6" />
                 </CustomBoxUI>
               </>
             }

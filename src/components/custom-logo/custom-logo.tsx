@@ -1,7 +1,7 @@
 import { UIBoltIcon } from "@/assets/ui-icons";
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
-import { CustomTypography } from "@/ui/typography/typography";
+import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
 
 export const CustomLogo = (props: any) => {
   const { mode = "dark" } = props;
@@ -16,7 +16,7 @@ export const CustomLogo = (props: any) => {
           color: mode === "light" ? "text.primary" : "common.white",
         }}
       />
-      <CustomTypography
+      <CustomTypographyUI
         variant="logoText"
         color={mode === "light" ? "text.primary" : "common.white"}
         text="Flash0Verse"

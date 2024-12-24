@@ -2,7 +2,7 @@
 
 import { Checkbox, FormControlLabel } from "@mui/material";
 
-export const CustomCheckbox = (props: any) => {
+export const CustomCheckboxUI = (props: any) => {
   const {
     isDefaultCheck,
     color,

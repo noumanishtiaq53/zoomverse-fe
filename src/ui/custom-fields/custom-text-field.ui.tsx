@@ -1,6 +1,6 @@
 import { InputAdornment, TextField } from "@mui/material";
 
-export const CustomTextFields = (props: any) => {
+export const CustomTextFieldUI = (props: any) => {
   const {
     label = "",
     variant = "outlined",

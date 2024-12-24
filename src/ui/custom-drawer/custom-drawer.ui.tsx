@@ -1,6 +1,6 @@
 import { Drawer } from "@mui/material";
 
-export const CustomDrawer = (props: any) => {
+export const CustomDrawerUI = (props: any) => {
   const { isPortalOpen, closePortal, anchor = "left", children } = props;
 
   return (

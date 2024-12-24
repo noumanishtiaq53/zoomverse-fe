@@ -1,5 +1,5 @@
 import { TextFormFields } from "@/components/form-fields";
-import { CustomFormProvider } from "@/providers/custom-form-provider";
+import { CustomFormProvider } from "@/providers/custom-form.provider";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 

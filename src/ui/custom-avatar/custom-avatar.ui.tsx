@@ -1,5 +1,5 @@
 import { Avatar } from "@mui/material";
-import { CustomTypography } from "../typography/typography";
+import { CustomTypographyUI } from "../custom-typography/custom-typography.ui";
 import { pxToRem } from "@/utils/css.utils";
 
 export const CustomAvatarUI = (props: any) => {
@@ -33,7 +33,7 @@ export const CustomAvatarUI = (props: any) => {
       variant={variant}
     >
       {avatarInitial && (
-        <CustomTypography text={avatarInitial} variant="avatarInitial" />
+        <CustomTypographyUI text={avatarInitial} variant="avatarInitial" />
       )}
     </Avatar>
   );

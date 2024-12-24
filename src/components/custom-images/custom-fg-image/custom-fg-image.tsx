@@ -1,4 +1,4 @@
-import { CustomAvatarUI } from "@/ui/custom-avatar/avatar.ui";
+import { CustomAvatarUI } from "@/ui/custom-avatar/custom-avatar.ui";
 
 export const CustomFgImage = (props: any) => {
   const { isStaticImage, fgImage, height } = props;

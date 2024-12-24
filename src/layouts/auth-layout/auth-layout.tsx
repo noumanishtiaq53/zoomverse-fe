@@ -1,17 +1,17 @@
 "use client";
 import { BgAuthImage } from "@/assets/images";
 import { CustomBgImage } from "@/components/custom-images/custom-bg-image/custom-bg-image";
-import { CustomAvatarUI } from "@/ui/custom-avatar/avatar.ui";
+import { CustomAvatarUI } from "@/ui/custom-avatar/custom-avatar.ui";
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
-import { CustomGrid } from "@/ui/grid/grid";
-import { CustomTypography } from "@/ui/typography/typography";
+import { CustomGridUI } from "@/ui/custom-grid/custom-grid.ui";
+import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
 
 export const AuthLayout = (props: any) => {
   const { children } = props;
 
   return (
     <CustomBgImage isStaticBg bgImage={BgAuthImage}>
-      <CustomGrid
+      <CustomGridUI
         isContainer
         display="flex"
         justifyContent="center"
@@ -20,7 +20,7 @@ export const AuthLayout = (props: any) => {
         maxWidth="lg"
         padding={{ xs: 3, md: 4 }}
       >
-        <CustomGrid>
+        <CustomGridUI>
           <CustomBoxUI
             customStyles={{
               color: "common.white",
@@ -28,15 +28,15 @@ export const AuthLayout = (props: any) => {
             }}
           >
             <CustomAvatarUI src={BgAuthImage?.src} />
-            <CustomTypography variant="h4" text="Welcome To" />
-            <CustomTypography variant="h1" text="FlashOVerse" />
-            <CustomTypography
+            <CustomTypographyUI variant="h4" text="Welcome To" />
+            <CustomTypographyUI variant="h1" text="FlashOVerse" />
+            <CustomTypographyUI
               variant="h5"
               text="MetaHumans possess extraordinary powers, often due to accidents or mutations. The Flash, Barry Allen, gains super-speed from a lightning strike, tapping into the Speed Force, showcasing humanity’s limitless potential for evolution"
             />
           </CustomBoxUI>
-        </CustomGrid>
-        <CustomGrid>
+        </CustomGridUI>
+        <CustomGridUI>
           <CustomBoxUI
             customStyles={{
               backgroundColor: "common.white",
@@ -46,8 +46,8 @@ export const AuthLayout = (props: any) => {
           >
             {children}
           </CustomBoxUI>
-        </CustomGrid>
-      </CustomGrid>
+        </CustomGridUI>
+      </CustomGridUI>
     </CustomBgImage>
   );
 };

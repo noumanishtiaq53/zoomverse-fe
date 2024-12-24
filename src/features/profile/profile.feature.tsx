@@ -1,11 +1,28 @@
-import { ProfileImageCard } from "@/components/custom-cards/profile-image-card/profile-image-card";
-import { CustomCardUI } from "@/ui/custom-card/custom-card";
+import { ProfileBioCard } from "@/components/custom-cards/profile-bio-card/profile-bio-card";
+import { ProfileBioImages } from "@/components/custom-images/profile-bio-images/profile-bio-images";
+import { CustomCardUI } from "@/ui/custom-card/custom-card.ui";
 
 export const ProfileFeature = () => {
   return (
     <>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <CustomCardUI></CustomCardUI>
-      <ProfileImageCard />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <ProfileBioImages />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <ProfileBioCard />
     </>
   );
 };

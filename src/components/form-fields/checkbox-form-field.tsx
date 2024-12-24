@@ -1,5 +1,5 @@
 "use client";
-import { CustomCheckbox } from "@/ui/fields/custom-checkbox";
+import { CustomCheckboxUI } from "@/ui/custom-fields/custom-checkbox.ui";
 import { Controller, useFormContext } from "react-hook-form";
 
 export const CheckboxFormField = (props: any) => {
@@ -12,7 +12,7 @@ export const CheckboxFormField = (props: any) => {
       control={control}
       render={({ field, fieldState: { error } }) => {
         return (
-          <CustomCheckbox
+          <CustomCheckboxUI
             name={name}
             label={label}
             value={field?.value}

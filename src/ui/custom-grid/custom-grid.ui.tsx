@@ -1,6 +1,6 @@
 import { Grid2 } from "@mui/material";
 
-export const CustomGrid = (props: any) => {
+export const CustomGridUI = (props: any) => {
   const {
     isContainer,
     children,

@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { primaryMenuItemsData } from "./static-menu-items.data";
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
-import { CustomTypography } from "@/ui/typography/typography";
+import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
 
 export const StaticMenuItems = (props: any) => {
   const {
@@ -56,7 +56,7 @@ export const StaticMenuItems = (props: any) => {
                         />
                       </CustomBoxUI>
                     )}
-                    <CustomTypography text={menuItem?.name} />
+                    <CustomTypographyUI text={menuItem?.name} />
                   </CustomBoxUI>
                 ) : (
                   menuItem?.name

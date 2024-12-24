@@ -23,6 +23,7 @@ export const CustomBoxUI = (props: any) => {
     onMouseOut,
     hoverStyles,
     customStyles,
+    component,
   } = props;
 
   return (
@@ -48,6 +49,7 @@ export const CustomBoxUI = (props: any) => {
           ...hoverStyles,
         },
       }}
+      component={component}
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
     >

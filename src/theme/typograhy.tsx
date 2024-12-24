@@ -19,17 +19,25 @@ export const typography = {
     fontWeight: 700, //used
   },
   h4: {
-    fontSize: pxToRem(24), //used
-    fontWeight: 500,
-    padding: 10,
+    fontSize: pxToRem(24), //used  for heading text 24 fontweight is 700
+    fontWeight: 700,
   },
   h5: {
-    fontSize: pxToRem(18), //used
-    fontWeight: 600,
+    fontSize: pxToRem(18), //used  for heading text 18 fontweight is 700
+    fontWeight: 700,
   },
   h6: {
-    fontSize: pxToRem(14), //used
+    fontSize: pxToRem(16), //used  for heading text 16 fontweight is 700
     fontWeight: 700,
+  },
+  subtitle1: {
+    fontSize: pxToRem(14), //used  for heading text 14 fontweight is 700
+    fontWeight: 700,
+  },
+  subtitle2: {
+    // for help text
+    fontSize: pxToRem(14),
+    fontWeight: 500,
   },
   body1: {
     fontSize: pxToRem(16),
@@ -37,26 +45,15 @@ export const typography = {
   },
   body2: {
     fontSize: pxToRem(14),
-    fontWeight: 500,
-  },
-  subtitle1: {
-    fontSize: pxToRem(16),
     fontWeight: 400,
-  },
-  subtitle2: {
-    // for help text
-    fontSize: pxToRem(14),
-    fontWeight: 500,
   },
   caption: {
     fontSize: pxToRem(14),
     fontWeight: 500,
   },
   overline: {
-    // for link text
-    fontSize: pxToRem(14),
-    fontWeight: 600,
-    textTransform: "none",
+    fontSize: pxToRem(12), //for capital text mainly for record counts
+    fontWeight: 700,
   },
   button: {
     fontSize: pxToRem(14),
@@ -71,5 +68,11 @@ export const typography = {
   avatarInitial: {
     fontSize: pxToRem(12),
     fontWeight: 600,
+  },
+  linkText: {
+    // for link text
+    fontSize: pxToRem(14),
+    fontWeight: 600,
+    textTransform: "none",
   },
 };

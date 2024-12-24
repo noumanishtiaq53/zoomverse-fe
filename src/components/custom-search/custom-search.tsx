@@ -1,5 +1,5 @@
 "use client";
-import { CustomTextFields } from "@/ui/fields/custom-text-fields";
+import { CustomTextFieldUI } from "@/ui/custom-fields/custom-text-field.ui";
 import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
 import { UISearchIcon } from "@/assets/ui-icons";
 
@@ -11,7 +11,7 @@ export const CustomSearch = (props: any) => {
   };
 
   return (
-    <CustomTextFields
+    <CustomTextFieldUI
       label=""
       onChange={handleSearch}
       value={search}

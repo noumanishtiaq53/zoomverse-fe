@@ -23,7 +23,11 @@ export const MuiThemeProvider = (props: any) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles styles={{}} />
+      <GlobalStyles
+        styles={(theme) => ({
+          "& ::selection": { backgroundColor: theme?.palette?.secondary?.main },
+        })}
+      />
       <CssBaseline />
       {children}
     </ThemeProvider>
