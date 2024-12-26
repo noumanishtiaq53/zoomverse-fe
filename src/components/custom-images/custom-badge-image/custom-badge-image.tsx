@@ -6,14 +6,14 @@ import { CustomAvatarBadge } from "../../custom-badges/custom-avatar-badge/custo
 import { CustomImage } from "../custom-image/custom-image";
 import { CustomStatusBadge } from "@/components/custom-badges/custom-status-badge/custom-status-badge";
 
-export const CustomProfileAvatar = (props: any) => {
+export const CustomBadgeImage = (props: any) => {
   const {
-    dimension = PROFILE_AVATAR_DIMENSIONS_TYPES?.LARGE,
-    isAvatar,
-    isHideStatus = false,
-    count = 23,
-    image,
-    avatarInitial,
+    dimension = PROFILE_AVATAR_DIMENSIONS_TYPES?.EXTRA_SMALL,
+    isAvatar = false,
+    avatarBgColor = "success.main",
+    count = 0,
+    image = " ",
+    avatarInitial
   } = props;
 
   return (
@@ -22,10 +22,12 @@ export const CustomProfileAvatar = (props: any) => {
       height={PROFILE_AVATAR_BADGE_DIMENSIONS?.[dimension]?.height}
       count={count}
     >
-      <CustomStatusBadge dimension={dimension} isHideStatus={isHideStatus}>
+      <CustomStatusBadge dimension={dimension}>
         <CustomImage
           dimension={dimension}
           isAvatar={isAvatar}
+          avatarPadding={0.7}
+          avatarBgColor={avatarBgColor}
           image={image}
           avatarInitial={avatarInitial}
         />

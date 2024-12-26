@@ -1,6 +1,7 @@
 const common = {
   white: "#ffffff",
   black: "#000000",
+  disabled: "#adafca",
 };
 
 const primary = {
@@ -11,6 +12,14 @@ const primary = {
 
 const secondary = {
   main: "#23d2e2",
+};
+
+const success = {
+  main: "#1df377",
+};
+
+const error = {
+  main: "#f9515c",
 };
 
 const text = {
@@ -24,18 +33,19 @@ const background = {
 };
 
 const grey = {
-  0: "#adafca"
-}
+  0: "#adafca",
+};
 
-const divider = '#eaeaf5'
-
+const divider = "#eaeaf5";
 
 export const palette = {
   common,
   primary,
   secondary,
+  success,
+  error,
   text,
   background,
   grey,
-  divider
+  divider,
 };

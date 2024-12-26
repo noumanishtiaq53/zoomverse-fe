@@ -1,3 +1,7 @@
+import {
+  BADGE_POSITION,
+  BADGE_POSITION_ANCHOR,
+} from "@/constants/badge-constant";
 import { Badge } from "@mui/material";
 
 export const CustomBadgeUI = (props: any) => {
@@ -8,7 +12,7 @@ export const CustomBadgeUI = (props: any) => {
     customStyles,
     hoverStyles,
     variant,
-    anchorOrigin = { vertical: "top", horizontal: "right" },
+    position = BADGE_POSITION?.TOP_LEFT,
     invisible = false,
     max = 99,
     overlap,
@@ -20,7 +24,7 @@ export const CustomBadgeUI = (props: any) => {
       badgeContent={badgeContent}
       color={color}
       variant={variant}
-      anchorOrigin={anchorOrigin}
+      anchorOrigin={BADGE_POSITION_ANCHOR?.[position]}
       invisible={invisible}
       max={max}
       overlap={overlap}

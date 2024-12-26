@@ -13,25 +13,30 @@ export const CustomImage = (props: any) => {
     gradientBackground = "linear-gradient(90deg, rgba(97,93,250,1) 0%, rgba(35,210,226,1) 35%, rgba(173,175,202,1) 100%)",
     isStaticImage = true,
     image = ProfileAvatarCommonImage,
+    isAvatar = true,
+    avatarPadding = 0,
+    avatarBgColor = "common.white",
+    avatarInitial,
   } = props;
 
   const srcImage = isStaticImage ? image?.src : image;
 
   return (
     <HexagonalCard margin={-1} padding={0.5} background={gradientBackground}>
-      <HexagonalCard padding={0.5}>
+      <HexagonalCard padding={isAvatar ? 0.5 : 0}>
         <CustomAvatarUI
+          avatarInitial={avatarInitial}
           src={srcImage}
           alt="profile-avatars"
-          variant="circular"
+          variant="square"
           customStyles={{
             width: PROFILE_AVATAR_DIMENSIONS?.[dimension]?.width,
             height: PROFILE_AVATAR_DIMENSIONS?.[dimension]?.height,
             clipPath: CLIP_PATH?.POLYGON_AVATAR,
-            backgroundColor: "common.white",
+            backgroundColor: avatarBgColor,
             boxShadow: 1,
-            borderRadius: 2,
             margin: "auto",
+            padding: avatarPadding,
           }}
         />
       </HexagonalCard>

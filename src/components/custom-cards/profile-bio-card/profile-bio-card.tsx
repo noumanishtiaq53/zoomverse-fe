@@ -4,14 +4,34 @@ import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { CustomCardUI } from "@/ui/custom-card/custom-card.ui";
 import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
 import { Fragment } from "react";
-import { recordItemsListData } from "./profile-bio-card.data";
-import { CustomProfileAvatar } from "@/components/custom-images/custom-profile-avatar/custom-profile-avatar";
-import { HexagonalCard } from "../hexagonal-card/hexagonal-card";
+import { customBadgesData, recordItemsListData } from "./profile-bio-card.data";
+import {
+  COVER_IMAGE_DIMENSIONS_TYPES,
+  PROFILE_AVATAR_DIMENSIONS_TYPES,
+  PROFILE_BIO_CARD_DIMENSIONS_TYPES,
+} from "@/constants/dimensions.constant";
+import { CustomBadgeImage } from "@/components/custom-images/custom-badge-image/custom-badge-image";
+import { SocialMediaCards } from "../social-media-cards/social-media-cards";
 
-export const ProfileBioCard = () => {
+export const ProfileBioCard = (props: any) => {
+  const { dimensions = PROFILE_BIO_CARD_DIMENSIONS_TYPES?.PORTRAIT } = props;
+
+  const propsMap = {
+    [PROFILE_BIO_CARD_DIMENSIONS_TYPES?.PORTRAIT]: {
+      profileDimension: PROFILE_AVATAR_DIMENSIONS_TYPES?.LARGE,
+      coverDimension: COVER_IMAGE_DIMENSIONS_TYPES?.MEDIUM,
+      flexDirection: "column",
+    },
+  };
+
+  const data = propsMap?.[dimensions];
+
   return (
     <CustomCardUI>
-      <ProfileBioImages />
+      <ProfileBioImages
+        profileDimension={data?.profileDimension}
+        coverDimension={data?.coverDimension}
+      />
       <CustomBoxUI
         customStyles={{
           display: "flex",
@@ -21,6 +41,7 @@ export const ProfileBioCard = () => {
           padding: 2,
           flexWrap: "wrap",
           overflow: "auto",
+          flexDirection: data?.flexDirection,
         }}
       >
         <CustomBoxUI>
@@ -31,18 +52,46 @@ export const ProfileBioCard = () => {
             customStyles={{
               color: "text.disabled",
             }}
+            hoverStyles={{
+              color: "secondary.main",
+            }}
           />
         </CustomBoxUI>
-        <CustomBoxUI>
-          {/* <HexagonalCard padding={1.5} backgroundColor="secondary.main"> */}
-            <CustomProfileAvatar />
-          {/* </HexagonalCard> */}
+        <SocialMediaCards />
+        <CustomBoxUI
+          customStyles={{
+            display: "flex",
+            alignItems: "center",
+            gap: 3,
+            marginY: 2,
+          }}
+        >
+          {customBadgesData?.length &&
+            customBadgesData?.slice(0, 3)?.map((badge: any) => (
+              <Fragment key={badge._id}>
+                <CustomBadgeImage
+                  dimension={PROFILE_AVATAR_DIMENSIONS_TYPES?.EXTRA_SMALL}
+                  isAvatar={false}
+                  count={badge?.count}
+                  image={badge?.image}
+                />
+              </Fragment>
+            ))}
+          {customBadgesData?.length > 3 ? (
+            <CustomBadgeImage
+              dimension={PROFILE_AVATAR_DIMENSIONS_TYPES?.EXTRA_SMALL}
+              isAvatar={false}
+              avatarInitial={`+${customBadgesData?.length - 3}`}
+              avatarBgColor={"common.disabled"}
+            />
+          ) : (
+            <></>
+          )}
         </CustomBoxUI>
         <CustomBoxUI
           customStyles={{
             display: "flex",
             alignItems: "center",
-            gap: 0.2,
           }}
         >
           {!!recordItemsListData?.length &&
@@ -55,9 +104,6 @@ export const ProfileBioCard = () => {
                 />
               </Fragment>
             ))}
-          {/* <CustomRecordCount />
-          <CustomRecordCount />
-          <CustomRecordCount /> */}
         </CustomBoxUI>
       </CustomBoxUI>
     </CustomCardUI>

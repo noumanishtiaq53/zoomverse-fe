@@ -1,16 +1,16 @@
 import { CLIP_PATH } from "@/constants/css.constant";
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
-import zIndex from "@mui/material/styles/zIndex";
 
 export const HexagonalCard = (props: any) => {
   const {
     children,
     borderRadius = 2,
-    padding = 0.3,
+    padding = 0,
     backgroundColor = "common.white",
     background,
     zIndex,
-    margin
+    margin,
+    border = "none",
   } = props;
 
   return (
@@ -22,9 +22,10 @@ export const HexagonalCard = (props: any) => {
         borderRadius,
         padding,
         clipPath: CLIP_PATH?.POLYGON_AVATAR,
-        display: "inline-block",
+        display: "inline-flex",
         zIndex,
-        margin
+        margin,
+        border,
         // position:'relative'
       }}
     >

@@ -17,7 +17,9 @@ export const MainLayout = (props: any) => {
           <CustomGridUI size="auto">
             <LeftSideBar />
           </CustomGridUI>
-          <CustomGridUI size="grow">{children}</CustomGridUI>
+          <CustomGridUI size="grow" customStyles={{ paddingY:2 }}>
+            {children}
+          </CustomGridUI>
           <CustomGridUI size="auto">
             <RightSideBar />
           </CustomGridUI>
