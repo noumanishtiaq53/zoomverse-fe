@@ -14,6 +14,7 @@ export const Header = () => {
       customStyles={{
         backgroundColor: "primary.main",
         padding: 2,
+        height: pxToRem(100),
       }}
     >
       <CustomBoxUI
@@ -24,7 +25,7 @@ export const Header = () => {
           gap: 3,
         }}
       >
-        <CustomLogo/>
+        <CustomLogo />
         <CustomIconUI
           Icon={UIGridViewIcon}
           customStyles={{

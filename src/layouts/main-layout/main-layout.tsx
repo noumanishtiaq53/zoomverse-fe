@@ -3,6 +3,7 @@ import { RightSideBar } from "./right-sidebar/right-sidebar";
 import { LeftSideBar } from "./left-sidebar/left-sidebar";
 import { Header } from "./header/header";
 import { CustomGridUI } from "@/ui/custom-grid/custom-grid.ui";
+import { pxToRem } from "@/utils/css.utils";
 
 export const MainLayout = (props: any) => {
   const { children } = props;
@@ -10,20 +11,54 @@ export const MainLayout = (props: any) => {
   return (
     <>
       <CustomBoxUI>
-        <CustomBoxUI>
+        <CustomBoxUI
+          customStyles={{
+            position: "fixed",
+            top: 0,
+            zIndex: 1000,
+            width: "100%",
+          }}
+        >
           <Header />
         </CustomBoxUI>
-        <CustomGridUI isContainer>
-          <CustomGridUI size="auto">
+
+        <CustomBoxUI
+          customStyles={{
+            maxHeight: "calc(100vh - 100px)",
+            display: "flex",
+            justifyContent: "space-between",
+            gap: 2,
+            marginTop: pxToRem(100),
+            overflow: "clip",
+          }}
+        >
+          <CustomBoxUI
+            customStyles={{
+              backgroundColor: "common.white",
+              boxShadow: 1,
+              overflow: "auto",
+              minHeight: "100%",
+            }}
+          >
             <LeftSideBar />
-          </CustomGridUI>
-          <CustomGridUI size="grow" customStyles={{ paddingY:2 }}>
+          </CustomBoxUI>
+          <CustomBoxUI customStyles={{ flex: 1, overflow: "auto" }}>
             {children}
-          </CustomGridUI>
-          <CustomGridUI size="auto">
-            <RightSideBar />
-          </CustomGridUI>
-        </CustomGridUI>
+          </CustomBoxUI>
+          <CustomBoxUI
+            customStyles={{
+              backgroundColor: "common.white",
+              boxShadow: 1,
+              overflow: "auto",
+              minHeight: "100%",
+            }}
+          >
+            <LeftSideBar />
+          </CustomBoxUI>
+          {/* <RightSideBar /> */}
+        </CustomBoxUI>
+
+        {/* ****++++++++++++++++++++****************** */}
       </CustomBoxUI>
     </>
   );

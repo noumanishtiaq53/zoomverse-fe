@@ -1,3 +1,33 @@
+import {
+  UIFacebookIcon,
+  UIInstagramIcon,
+  UIXIcon,
+  UIYouTubeIcon,
+} from "@/assets/ui-icons";
+
+export const socialMediaAccountsListData = [
+  {
+    _id: 1,
+    icon: UIFacebookIcon,
+    backgroundColor: "common.facebook",
+  },
+  {
+    _id: 2,
+    icon: UIYouTubeIcon,
+    backgroundColor: "common.youtube",
+  },
+  {
+    _id: 3,
+    icon: UIInstagramIcon,
+    backgroundColor: "common.instagram",
+  },
+  {
+    _id: 4,
+    icon: UIXIcon,
+    backgroundColor: "common.twitter",
+  },
+];
+
 export const recordItemsListData = [
   {
     _id: 1,

@@ -25,7 +25,10 @@ export const MuiThemeProvider = (props: any) => {
     <ThemeProvider theme={theme}>
       <GlobalStyles
         styles={(theme) => ({
-          "& ::selection": { backgroundColor: theme?.palette?.secondary?.main },
+          "& ::selection": {
+            backgroundColor: theme?.palette?.secondary?.main,
+            color: theme?.palette?.common?.white,
+          },
         })}
       />
       <CssBaseline />

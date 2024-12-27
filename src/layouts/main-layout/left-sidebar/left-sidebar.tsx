@@ -8,11 +8,8 @@ export const LeftSideBar = () => {
       <ProfileBioCard />
       <CustomBoxUI
         customStyles={{
-          backgroundColor: "common.white",
-          paddingX: 2,
           paddingY: 1,
-          boxShadow: 1,
-          minHeight: "80vh",
+          paddingX: 2,
         }}
       >
         <br />

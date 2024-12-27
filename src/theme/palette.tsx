@@ -2,6 +2,10 @@ const common = {
   white: "#ffffff",
   black: "#000000",
   disabled: "#adafca",
+  twitter: "#1abcff",
+  facebook: "#3763d2",
+  youtube: "#fd434f",
+  instagram: "#f8468d",
 };
 
 const primary = {
