@@ -1,16 +1,23 @@
 import { CustomAvatarUI } from "@/ui/custom-avatar/custom-avatar.ui";
 
 export const CustomFgImage = (props: any) => {
-  const { isStaticImage, fgImage, height } = props;
-  const srcFgImage = isStaticImage ? fgImage?.src : fgImage;
-  
+  const {
+    isStaticImage = true,
+    imageSrc,
+    height = "auto",
+    aspectRatio = "4/3",
+  } = props;
+
+  const srcFgImage = isStaticImage ? imageSrc?.src : imageSrc;
+
   return (
     <CustomAvatarUI
       src={srcFgImage}
       variant="square"
       customStyles={{
         width: "100%",
-        height: height,
+        height,
+        aspectRatio,
         backgroundColor: "common.white",
       }}
     />

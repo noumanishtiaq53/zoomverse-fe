@@ -1,3 +1,4 @@
+import { PostCard } from "@/components/custom-cards/post-card/post-card";
 import { ProfileBioCard } from "@/components/custom-cards/profile-bio-card/profile-bio-card";
 import { UserInfoCard } from "@/components/custom-cards/user-info-card/user-info-card";
 import { CustomImage } from "@/components/custom-images/custom-image/custom-image";
@@ -50,10 +51,14 @@ export const ProfileFeature = () => {
       <br />
       <br />
       <CustomImage />
-
       <br />
       <br />
       <UserInfoCard />
+      <br />
+      <br />
+      <PostCard />
+      <br />
+      <br />
       <br />
       <br />
       <ProfileBioCard />

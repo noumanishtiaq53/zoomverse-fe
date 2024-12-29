@@ -22,3 +22,4 @@ export { default as UIInstagramIcon } from "@mui/icons-material/Instagram";
 export { default as UIYouTubeIcon } from "@mui/icons-material/YouTube";
 export { default as UILinkedInIcon } from "@mui/icons-material/LinkedIn";
 export { default as UIPinterestIcon } from "@mui/icons-material/Pinterest";
+export { default as UIMoreHorizIcon } from "@mui/icons-material/MoreHoriz";
