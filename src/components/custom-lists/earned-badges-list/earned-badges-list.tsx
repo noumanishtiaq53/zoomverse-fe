@@ -4,18 +4,18 @@ import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { Fragment } from "react";
 
 export const EarnedBadgesList = (props: any) => {
-  const { earnedBadgesListData = [] } = props;
+  const { earnedBadgesListData = [], showBadges = 3 } = props;
   return (
     <CustomBoxUI
       customStyles={{
         display: "flex",
         alignItems: "center",
-        gap: 3,
+        gap: 1,
         marginY: 2,
       }}
     >
       {earnedBadgesListData?.length &&
-        earnedBadgesListData?.slice(0, 3)?.map((badge: any) => (
+        earnedBadgesListData?.slice(0, showBadges)?.map((badge: any) => (
           <Fragment key={badge._id}>
             <CustomBadgeImage
               dimension={PROFILE_AVATAR_DIMENSIONS_TYPES?.EXTRA_SMALL}
@@ -25,11 +25,11 @@ export const EarnedBadgesList = (props: any) => {
             />
           </Fragment>
         ))}
-      {earnedBadgesListData?.length > 3 ? (
+      {earnedBadgesListData?.length > showBadges ? (
         <CustomBadgeImage
           dimension={PROFILE_AVATAR_DIMENSIONS_TYPES?.EXTRA_SMALL}
           isAvatar={false}
-          avatarInitial={`+${earnedBadgesListData?.length - 3}`}
+          avatarInitial={`+${earnedBadgesListData?.length - showBadges}`}
           avatarBgColor={"common.disabled"}
         />
       ) : (

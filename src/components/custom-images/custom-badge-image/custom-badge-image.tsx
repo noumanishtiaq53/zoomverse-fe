@@ -13,7 +13,9 @@ export const CustomBadgeImage = (props: any) => {
     avatarBgColor = "success.main",
     count = 0,
     image = " ",
-    avatarInitial
+    avatarInitial,
+    status,
+    isHideStatus,
   } = props;
 
   return (
@@ -22,7 +24,11 @@ export const CustomBadgeImage = (props: any) => {
       height={PROFILE_AVATAR_BADGE_DIMENSIONS?.[dimension]?.height}
       count={count}
     >
-      <CustomStatusBadge dimension={dimension}>
+      <CustomStatusBadge
+        dimension={dimension}
+        status={status}
+        isHideStatus={isHideStatus}
+      >
         <CustomImage
           dimension={dimension}
           isAvatar={isAvatar}

@@ -6,6 +6,7 @@ import {
   PROFILE_AVATAR_DIMENSIONS_TYPES,
 } from "@/constants/dimensions.constant";
 import { CustomAvatarUI } from "@/ui/custom-avatar/custom-avatar.ui";
+import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 
 export const CustomImage = (props: any) => {
   const {
@@ -22,7 +23,7 @@ export const CustomImage = (props: any) => {
   const srcImage = isStaticImage ? image?.src : image;
 
   return (
-    <HexagonalCard margin={-1} padding={0.5} background={gradientBackground}>
+    <HexagonalCard padding={0.5} background={gradientBackground}>
       <HexagonalCard padding={isAvatar ? 0.5 : 0}>
         <CustomAvatarUI
           avatarInitial={avatarInitial}

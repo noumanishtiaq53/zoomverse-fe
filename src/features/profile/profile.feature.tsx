@@ -1,4 +1,6 @@
 import { ProfileBioCard } from "@/components/custom-cards/profile-bio-card/profile-bio-card";
+import { UserInfoCard } from "@/components/custom-cards/user-info-card/user-info-card";
+import { CustomImage } from "@/components/custom-images/custom-image/custom-image";
 import { CustomProfileAvatar } from "@/components/custom-images/custom-profile-avatar/custom-profile-avatar";
 import { ProfileBioImages } from "@/components/custom-images/profile-bio-images/profile-bio-images";
 import {
@@ -43,13 +45,15 @@ export const ProfileFeature = () => {
           dimension={PROFILE_AVATAR_DIMENSIONS_TYPES?.SMALL}
         />
       </CustomBoxUI>
+      <br />
+      <br />
+      <br />
+      <br />
+      <CustomImage />
 
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <UserInfoCard />
       <br />
       <br />
       <ProfileBioCard />
