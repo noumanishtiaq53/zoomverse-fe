@@ -15,6 +15,7 @@ import {
 import { SocialMediaAccountsList } from "../../custom-lists/social-media-accounts-list/social-media-accounts-list";
 import { RelationCountList } from "@/components/custom-lists/relation-count-list/relation-count-list";
 import { EarnedBadgesList } from "@/components/custom-lists/earned-badges-list/earned-badges-list";
+import { TwoRowButtons } from "@/components/custom-buttons/two-row-buttons/two-row-buttons";
 
 export const ProfileBioCard = (props: any) => {
   const { dimensions = PROFILE_BIO_CARD_DIMENSIONS_TYPES?.PORTRAIT } = props;
@@ -47,7 +48,7 @@ export const ProfileBioCard = (props: any) => {
           flexDirection: data?.flexDirection,
         }}
       >
-        <CustomBoxUI>
+        <CustomBoxUI customStyles={{}}>
           <CustomTypographyUI text="Marina Valentine" variant="h5" />
           <CustomTypographyUI
             text="www.gamehuntress.com"
@@ -71,6 +72,7 @@ export const ProfileBioCard = (props: any) => {
         <CustomBoxUI>
           <RelationCountList relationCountListData={recordItemsListData} />
         </CustomBoxUI>
+        <TwoRowButtons />
       </CustomBoxUI>
     </CustomCardUI>
   );
