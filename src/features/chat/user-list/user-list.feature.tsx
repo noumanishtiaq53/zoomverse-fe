@@ -5,10 +5,8 @@ import { UserInfoCard } from "@/components/custom-cards/user-info-card/user-info
 import { CustomSearch } from "@/components/custom-search/custom-search";
 import { SEARCH_FIELD_VARIANT } from "@/constants/fields.constant";
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
-import { CustomDrawerUI } from "@/ui/custom-drawer/custom-drawer.ui";
 import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
 import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
-import { useState } from "react";
 
 export const UserListFeature = (props: any) => {
   const {
