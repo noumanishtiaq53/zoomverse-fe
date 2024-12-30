@@ -2,7 +2,7 @@ import { CLIP_PATH } from "@/constants/css.constant";
 import { CustomAvatarUI } from "@/ui/custom-avatar/custom-avatar.ui";
 import { HexagonalCard } from "../../custom-cards/hexagonal-card/hexagonal-card";
 import { CustomBadgeUI } from "@/ui/custom-badge/custom-badge.ui";
-import { BADGE_POSITION } from "@/constants/badge-constant";
+import { BADGE_POSITION } from "@/constants/badge.constant";
 
 export const CustomAvatarBadge = (props: any) => {
   const { children, width, height, outerPadding = 0.2, count = 0 } = props;
@@ -19,7 +19,7 @@ export const CustomAvatarBadge = (props: any) => {
                 height: height,
                 clipPath: CLIP_PATH?.POLYGON_AVATAR,
                 backgroundColor: "primary.main",
-                boxShadow: 1,
+                boxShadow: 25,
                 borderRadius: 2,
               }}
             />

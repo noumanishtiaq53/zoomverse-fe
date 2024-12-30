@@ -35,7 +35,7 @@ export const CustomImage = (props: any) => {
             height: PROFILE_AVATAR_DIMENSIONS?.[dimension]?.height,
             clipPath: CLIP_PATH?.POLYGON_AVATAR,
             backgroundColor: avatarBgColor,
-            boxShadow: 1,
+            boxShadow: 25,
             margin: "auto",
             padding: avatarPadding,
           }}

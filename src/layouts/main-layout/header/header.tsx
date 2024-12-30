@@ -1,3 +1,5 @@
+"use client";
+
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
 import { pxToRem } from "@/utils/css.utils";
@@ -8,7 +10,8 @@ import { UIGridViewIcon, UISettingsIcon } from "@/assets/ui-icons";
 import { onlyIconMenuItemsData } from "../static-menu-items/static-menu-items.data";
 import { CustomLogo } from "@/components/custom-logo/custom-logo";
 
-export const Header = () => {
+export const Header = (props: any) => {
+  const { setShowFull } = props;
   return (
     <CustomBoxUI
       customStyles={{
@@ -35,6 +38,7 @@ export const Header = () => {
             color: "common.white",
           }}
           hasAction
+          handleAction={() => setShowFull?.(true)}
         />
         <StaticMenuItems />
         <CustomBoxUI

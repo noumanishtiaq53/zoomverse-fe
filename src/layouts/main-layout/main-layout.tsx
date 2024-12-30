@@ -1,12 +1,17 @@
+"use client";
+
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { RightSideBar } from "./right-sidebar/right-sidebar";
 import { LeftSideBar } from "./left-sidebar/left-sidebar";
 import { Header } from "./header/header";
-import { CustomGridUI } from "@/ui/custom-grid/custom-grid.ui";
 import { pxToRem } from "@/utils/css.utils";
+import { useState } from "react";
+import { CustomDrawerUI } from "@/ui/custom-drawer/custom-drawer.ui";
+import { ChatFeature } from "@/features/chat/chat.feature";
 
 export const MainLayout = (props: any) => {
   const { children } = props;
+  const [showFull, setShowFull] = useState(false);
 
   return (
     <>
@@ -19,7 +24,7 @@ export const MainLayout = (props: any) => {
             width: "100%",
           }}
         >
-          <Header />
+          <Header setShowFull={setShowFull} />
         </CustomBoxUI>
 
         <CustomBoxUI
@@ -32,34 +37,39 @@ export const MainLayout = (props: any) => {
             overflow: "clip",
           }}
         >
-          <CustomBoxUI
-            customStyles={{
-              backgroundColor: "common.white",
-              boxShadow: 1,
-              overflow: "auto",
-              minHeight: "100%",
-            }}
-          >
-            <LeftSideBar />
-          </CustomBoxUI>
+          {showFull ? (
+            <></>
+          ) : (
+            <CustomBoxUI
+              customStyles={{
+                overflow: "auto",
+              }}
+            >
+              <LeftSideBar showFull={showFull} />
+            </CustomBoxUI>
+          )}
           <CustomBoxUI customStyles={{ flex: 1, overflow: "auto" }}>
             {children}
           </CustomBoxUI>
           <CustomBoxUI
             customStyles={{
-              backgroundColor: "common.white",
-              boxShadow: 1,
               overflow: "auto",
-              minHeight: "100%",
             }}
           >
-            <LeftSideBar />
+            <ChatFeature/>
+            {/* <RightSideBar /> */}
           </CustomBoxUI>
-          {/* <RightSideBar /> */}
         </CustomBoxUI>
-
-        {/* ****++++++++++++++++++++****************** */}
       </CustomBoxUI>
+
+      {showFull && (
+        <CustomDrawerUI
+          isPortalOpen={showFull}
+          closePortal={() => setShowFull(false)}
+        >
+          <LeftSideBar showFull={showFull} />
+        </CustomDrawerUI>
+      )}
     </>
   );
 };

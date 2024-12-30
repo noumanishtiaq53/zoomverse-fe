@@ -1,10 +1,22 @@
 import { Drawer } from "@mui/material";
 
 export const CustomDrawerUI = (props: any) => {
-  const { isPortalOpen, closePortal, anchor = "left", children } = props;
+  const {
+    isPortalOpen,
+    closePortal,
+    anchor = "left",
+    children,
+    variant = "temporary",
+  } = props;
 
   return (
-    <Drawer open={isPortalOpen} onClose={closePortal} anchor={anchor}>
+    <Drawer
+      // hideBackdrop
+      open={isPortalOpen}
+      onClose={closePortal}
+      anchor={anchor}
+      variant={variant}
+    >
       {children}
     </Drawer>
   );

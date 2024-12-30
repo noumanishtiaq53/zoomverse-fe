@@ -1,7 +1,7 @@
 import {
   BADGE_POSITION,
   BADGE_POSITION_ANCHOR,
-} from "@/constants/badge-constant";
+} from "@/constants/badge.constant";
 import { Badge } from "@mui/material";
 
 export const CustomBadgeUI = (props: any) => {

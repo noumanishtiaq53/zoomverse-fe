@@ -20,6 +20,7 @@ export const CustomTextFieldUI = (props: any) => {
     borderRadius,
     border,
     color,
+    borderColor,
   } = props;
 
   return (
@@ -49,8 +50,10 @@ export const CustomTextFieldUI = (props: any) => {
         backgroundColor,
         borderRadius,
         border,
+        borderColor,
         "& .MuiTextField-root": {
           border,
+          borderColor,
         },
         "& .MuiInputBase-root": {
           color,

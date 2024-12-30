@@ -18,7 +18,7 @@ export const HexagonalCard = (props: any) => {
       customStyles={{
         backgroundColor,
         background: background,
-        boxShadow: 1,
+        boxShadow: 25,
         borderRadius,
         padding,
         clipPath: CLIP_PATH?.POLYGON_AVATAR,

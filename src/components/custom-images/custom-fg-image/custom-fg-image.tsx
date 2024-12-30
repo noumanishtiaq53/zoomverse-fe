@@ -5,7 +5,7 @@ export const CustomFgImage = (props: any) => {
     isStaticImage = true,
     imageSrc,
     height = "auto",
-    aspectRatio = "4/3",
+    aspectRatio = "10 / 4",
   } = props;
 
   const srcFgImage = isStaticImage ? imageSrc?.src : imageSrc;

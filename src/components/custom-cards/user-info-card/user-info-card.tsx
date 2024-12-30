@@ -8,6 +8,7 @@ export const UserInfoCard = (props: any) => {
     description = "ioi",
     isHideStatus = false,
     count = 0,
+    showInfo = true,
   } = props;
 
   return (
@@ -15,10 +16,12 @@ export const UserInfoCard = (props: any) => {
       customStyles={{ display: "flex", alignItems: "center", gap: 1 }}
     >
       <CustomBadgeImage isAvatar count={count} isHideStatus={isHideStatus} />
-      <CustomBoxUI>
-        <CustomTypographyUI text={name} variant="h6" />
-        <CustomTypographyUI text={description} variant="body1" />
-      </CustomBoxUI>
+      {showInfo && (
+        <CustomBoxUI>
+          <CustomTypographyUI text={name} variant="h6" />
+          <CustomTypographyUI text={description} variant="body1" />
+        </CustomBoxUI>
+      )}
     </CustomBoxUI>
   );
 };

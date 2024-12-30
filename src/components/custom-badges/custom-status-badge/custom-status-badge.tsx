@@ -1,4 +1,4 @@
-import { BADGE_DOT_COLOR, DOT_BADGE_TYPE } from "@/constants/badge-constant";
+import { BADGE_DOT_COLOR, DOT_BADGE_TYPE } from "@/constants/badge.constant";
 import { PROFILE_STATUS_BADGE_MARGIN } from "@/constants/dimensions.constant";
 import { CustomBadgeUI } from "@/ui/custom-badge/custom-badge.ui";
 

@@ -12,7 +12,7 @@ export const CustomCardUI = (props: any) => {
     <CustomBoxUI
       customStyles={{
         backgroundColor,
-        boxShadow: 1,
+        boxShadow: 25,
         borderRadius,
         padding,
       }}

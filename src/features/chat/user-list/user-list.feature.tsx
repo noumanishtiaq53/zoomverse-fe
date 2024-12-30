@@ -10,7 +10,7 @@ import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
 import { CustomTypographyUI } from "@/ui/custom-typography/custom-typography.ui";
 import { useState } from "react";
 
-export const RightSideBar = (props: any) => {
+export const UserListFeature = (props: any) => {
   const {
     chatsLists = [
       { _id: 1 },
@@ -30,9 +30,9 @@ export const RightSideBar = (props: any) => {
       // { _id: 17 },
       // { _id: 27 },
     ],
+    showFullBar,
+    setShowFullBar,
   } = props;
-
-  const [showFullBar, setShowFullBar] = useState(true);
 
   return (
     <CustomBoxUI
@@ -100,9 +100,11 @@ export const RightSideBar = (props: any) => {
             justifyContent: "center",
             alignItems: "center",
             gap: 2,
+            cursor: "pointer",
           }}
+          onClick={() => setShowFullBar?.((prev: boolean) => !prev)}
         >
-          <CustomIconUI Icon={UIFilterListIcon} />
+          <CustomIconUI Icon={UIFilterListIcon} hasAction />
           {showFullBar ? <CustomTypographyUI text="Messages / Chat" /> : <></>}
         </CustomBoxUI>
       </CustomBoxUI>
