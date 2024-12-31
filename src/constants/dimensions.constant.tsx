@@ -24,6 +24,11 @@ export const PROFILE_BIO_CARD_DIMENSIONS_TYPES = {
   LANDSCAPE: "landscape",
 };
 
+export const PROFILE_BIO_CARD_VIEW_TYPES = {
+  BRIEF: "brief",
+  DETAIL: "detail",
+};
+
 export const PROFILE_AVATAR_DIMENSIONS = {
   [PROFILE_AVATAR_DIMENSIONS_TYPES?.EXTRA_SMALL]: { width: 40, height: 40 },
   [PROFILE_AVATAR_DIMENSIONS_TYPES?.SMALL]: { width: 50, height: 50 },

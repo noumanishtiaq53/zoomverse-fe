@@ -13,7 +13,12 @@ export const TwoRowButtons = (props: any) => {
 
   return (
     <CustomBoxUI
-      customStyles={{ display: "flex", alignItems: "center", gap: 1 }}
+      customStyles={{
+        display: "flex",
+        alignItems: "center",
+        gap: 1,
+        flexDirection: { xs: "column", sm: "row" },
+      }}
     >
       <CustomButtonUI
         text={btnTextOne}

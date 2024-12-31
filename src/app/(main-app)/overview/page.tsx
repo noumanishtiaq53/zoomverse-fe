@@ -1,9 +1,7 @@
+import { OverviewFeature } from "@/features/overview/overview.feature";
+
 export const OverviewPage = () => {
-  return (
-    <>
-      <>Overview</>
-    </>
-  );
+  return <OverviewFeature />;
 };
 
 export default OverviewPage;

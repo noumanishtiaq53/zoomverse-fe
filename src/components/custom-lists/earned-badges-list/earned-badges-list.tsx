@@ -11,7 +11,6 @@ export const EarnedBadgesList = (props: any) => {
         display: "flex",
         alignItems: "center",
         gap: 1,
-        marginY: 2,
       }}
     >
       {earnedBadgesListData?.length &&

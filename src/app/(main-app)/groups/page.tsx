@@ -1,9 +1,7 @@
+import { GroupsFeature } from "@/features/groups/groups.feature";
+
 export const GroupsPage = () => {
-  return (
-    <>
-      <>Groups</>
-    </>
-  );
+  return <GroupsFeature />;
 };
 
 export default GroupsPage;

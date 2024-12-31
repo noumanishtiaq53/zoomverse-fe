@@ -1,9 +1,7 @@
+import { MarketplaceFeature } from "@/features/marketplace/marketplace.feature";
+
 const MarketplacePage = () => {
-  return (
-    <>
-      <>Marketplace</>
-    </>
-  );
+  return <MarketplaceFeature />;
 };
 
 export default MarketplacePage;

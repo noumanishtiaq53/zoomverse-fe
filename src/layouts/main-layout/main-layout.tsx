@@ -1,7 +1,6 @@
 "use client";
 
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
-import { RightSideBar } from "./right-sidebar/right-sidebar";
 import { LeftSideBar } from "./left-sidebar/left-sidebar";
 import { Header } from "./header/header";
 import { pxToRem } from "@/utils/css.utils";
@@ -30,6 +29,7 @@ export const MainLayout = (props: any) => {
         <CustomBoxUI
           customStyles={{
             maxHeight: "calc(100vh - 100px)",
+            minHeight: "calc(100vh - 100px)",
             display: "flex",
             justifyContent: "space-between",
             gap: 2,
@@ -43,12 +43,13 @@ export const MainLayout = (props: any) => {
             <CustomBoxUI
               customStyles={{
                 overflow: "auto",
+                display: { xs: "none", md: "block" },
               }}
             >
               <LeftSideBar showFull={showFull} />
             </CustomBoxUI>
           )}
-          <CustomBoxUI customStyles={{ flex: 1, overflow: "auto" }}>
+          <CustomBoxUI customStyles={{ flex: 1, overflow: "auto", p: 2 }}>
             {children}
           </CustomBoxUI>
           <CustomBoxUI
@@ -56,8 +57,7 @@ export const MainLayout = (props: any) => {
               overflow: "auto",
             }}
           >
-            <ChatFeature/>
-            {/* <RightSideBar /> */}
+            <ChatFeature />
           </CustomBoxUI>
         </CustomBoxUI>
       </CustomBoxUI>

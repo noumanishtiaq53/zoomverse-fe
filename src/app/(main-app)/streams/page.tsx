@@ -1,9 +1,5 @@
 export const StreamsPage = () => {
-  return (
-    <>
-      <>StreamsPage</>
-    </>
-  );
+  return <StreamsPage />;
 };
 
 export default StreamsPage;

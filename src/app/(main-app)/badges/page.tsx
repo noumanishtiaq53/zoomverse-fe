@@ -1,9 +1,7 @@
+import { BadgesFeature } from "@/features/badges/badges.feature";
+
 export const BadgesPage = () => {
-  return (
-    <>
-      <>Badges</>
-    </>
-  );
+  return <BadgesFeature />;
 };
 
 export default BadgesPage;

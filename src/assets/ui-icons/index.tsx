@@ -24,3 +24,4 @@ export { default as UILinkedInIcon } from "@mui/icons-material/LinkedIn";
 export { default as UIPinterestIcon } from "@mui/icons-material/Pinterest";
 export { default as UIMoreHorizIcon } from "@mui/icons-material/MoreHoriz";
 export { default as UIFilterListIcon } from "@mui/icons-material/FilterList";
+export { default as UIFiberManualRecordIcon } from "@mui/icons-material/FiberManualRecord";

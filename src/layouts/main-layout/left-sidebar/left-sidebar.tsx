@@ -16,7 +16,7 @@ export const LeftSideBar = (props: any) => {
       }}
     >
       {showFull ? (
-        <ProfileBioCard />
+        <ProfileBioCard outerMarginX={-2} hasShadow={"none"} />
       ) : (
         <CustomBoxUI customStyles={{ py: 2 }}>
           <CustomBadgeImage

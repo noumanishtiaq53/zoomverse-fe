@@ -1,9 +1,7 @@
+import { MembersFeature } from "@/features/members/members.feature";
+
 export const MembersPage = () => {
-  return (
-    <>
-      <>Members</>
-    </>
-  );
+  return <MembersFeature />;
 };
 
 export default MembersPage;

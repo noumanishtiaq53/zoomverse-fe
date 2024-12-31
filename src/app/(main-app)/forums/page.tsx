@@ -1,9 +1,7 @@
+import { ForumsFeature } from "@/features/forums/forums.feature";
+
 export const ForumsPage = () => {
-  return (
-    <>
-      <>ForumsPage</>
-    </>
-  );
+  return <ForumsFeature />;
 };
 
 export default ForumsPage;

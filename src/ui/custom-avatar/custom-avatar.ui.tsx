@@ -23,8 +23,8 @@ export const CustomAvatarUI = (props: any) => {
       sx={{
         width: pxToRem(width),
         height: pxToRem(height),
-        backgroundColor: backgroundColor,
-        margin: margin,
+        backgroundColor,
+        margin,
         ...customStyles,
         "&:hover": {
           ...hoverStyles,

@@ -1,4 +1,5 @@
 import { ProfileCoverCommonImage } from "@/assets/images/common";
+import { TwoRowButtons } from "@/components/custom-buttons/two-row-buttons/two-row-buttons";
 import { CustomCoverImage } from "@/components/custom-images/custom-cover-image/custom-cover-image";
 import { CustomProfileAvatar } from "@/components/custom-images/custom-profile-avatar/custom-profile-avatar";
 import {
@@ -13,6 +14,7 @@ export const ProfileBioImages = (props: any) => {
   const {
     profileDimension = PROFILE_AVATAR_DIMENSIONS_TYPES?.LARGE,
     coverDimension = COVER_IMAGE_DIMENSIONS_TYPES?.LARGE,
+    showButton,
   } = props;
 
   return (
@@ -32,14 +34,26 @@ export const ProfileBioImages = (props: any) => {
       <CustomBoxUI
         component="div"
         customStyles={{
-          position: "absolute",
-          transform: "scale(1) translate(0%, 50%)",
-          width: "100%",
-          bottom: 0,
-          textAlign: "center",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 3,
+          marginY: -7,
+          marginLeft: showButton ? { xs: 0, md: 30 } : 0,
         }}
       >
         <CustomProfileAvatar dimension={profileDimension} />
+        {showButton ? (
+          <CustomBoxUI
+            customStyles={{
+              display: { xs: "none", md: "block" },
+            }}
+          >
+            <TwoRowButtons />
+          </CustomBoxUI>
+        ) : (
+          <></>
+        )}
       </CustomBoxUI>
     </CustomBoxUI>
   );
