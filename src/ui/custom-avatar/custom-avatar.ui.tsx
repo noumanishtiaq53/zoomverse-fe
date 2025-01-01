@@ -4,7 +4,7 @@ import { pxToRem } from "@/utils/css.utils";
 
 export const CustomAvatarUI = (props: any) => {
   const {
-    src,
+    src = "",
     alt,
     width,
     height,

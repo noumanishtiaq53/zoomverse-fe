@@ -40,11 +40,11 @@ export const typography = {
     fontWeight: 500,
   },
   body1: {
-    fontSize: pxToRem(16),
+    fontSize: pxToRem(16), //used
     fontWeight: 400,
   },
   body2: {
-    fontSize: pxToRem(14),
+    fontSize: pxToRem(14), //used
     fontWeight: 400,
   },
   caption: {

@@ -7,8 +7,9 @@ export const CustomCardUI = (props: any) => {
     backgroundColor = "common.white",
     padding,
     marginX,
-    boxShadow = 25,
-    height = "100%"
+    boxShadow = 27,
+    height,
+    cardStyles,
   } = props;
 
   return (
@@ -19,7 +20,12 @@ export const CustomCardUI = (props: any) => {
         borderRadius,
         padding,
         marginX,
-        height
+        height,
+        display: "flex",
+        flexDirection: "column",
+        maxHeight: "100%",
+        minHeight: "100%",
+        ...cardStyles,
       }}
     >
       {children}

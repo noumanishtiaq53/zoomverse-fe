@@ -3,7 +3,7 @@
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 import { CustomButtonUI } from "@/ui/custom-button/custom-button.ui";
 
-export const TwoRowButtons = (props: any) => {
+export const ProfileActionButtons = (props: any) => {
   const {
     btnTextOne = "Add Friend",
     btnTextTwo = "Send Message",

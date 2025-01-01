@@ -1,5 +1,5 @@
 import { ProfileCoverCommonImage } from "@/assets/images/common";
-import { TwoRowButtons } from "@/components/custom-buttons/two-row-buttons/two-row-buttons";
+import { ProfileActionButtons } from "@/components/custom-buttons/profile-action-buttons/profile-action-buttons";
 import { CustomCoverImage } from "@/components/custom-images/custom-cover-image/custom-cover-image";
 import { CustomProfileAvatar } from "@/components/custom-images/custom-profile-avatar/custom-profile-avatar";
 import {
@@ -22,7 +22,7 @@ export const ProfileBioImages = (props: any) => {
       customStyles={{
         position: "relative",
         marginBottom: pxToRem(
-          PROFILE_AVATAR_DIMENSIONS?.[profileDimension]?.height / 2
+          -PROFILE_AVATAR_DIMENSIONS?.[profileDimension]?.height / 2
         ),
       }}
     >
@@ -38,8 +38,8 @@ export const ProfileBioImages = (props: any) => {
           justifyContent: "center",
           alignItems: "center",
           gap: 3,
-          marginY: -7,
           marginLeft: showButton ? { xs: 0, md: 30 } : 0,
+          transform: " translateY(-50%)",
         }}
       >
         <CustomProfileAvatar dimension={profileDimension} />
@@ -49,7 +49,7 @@ export const ProfileBioImages = (props: any) => {
               display: { xs: "none", md: "block" },
             }}
           >
-            <TwoRowButtons />
+            <ProfileActionButtons />
           </CustomBoxUI>
         ) : (
           <></>

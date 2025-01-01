@@ -18,7 +18,7 @@ import {
 import { SocialMediaAccountsList } from "../../custom-lists/social-media-accounts-list/social-media-accounts-list";
 import { RelationCountList } from "@/components/custom-lists/relation-count-list/relation-count-list";
 import { EarnedBadgesList } from "@/components/custom-lists/earned-badges-list/earned-badges-list";
-import { TwoRowButtons } from "@/components/custom-buttons/two-row-buttons/two-row-buttons";
+import { ProfileActionButtons } from "@/components/custom-buttons/profile-action-buttons/profile-action-buttons";
 import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
 import { UIFiberManualRecordIcon } from "@/assets/ui-icons";
 import { useState } from "react";
@@ -29,6 +29,7 @@ export const ProfileBioCard = (props: any) => {
     outerMarginX,
     hasShadow,
     viewType = PROFILE_BIO_CARD_VIEW_TYPES?.BRIEF,
+    outerHeight,
   } = props;
 
   const propsMap = {
@@ -67,12 +68,25 @@ export const ProfileBioCard = (props: any) => {
   const [showAboutUs, setShowAboutUs] = useState(false);
 
   return (
-    <CustomCardUI marginX={outerMarginX} boxShadow={hasShadow}>
-      <ProfileBioImages
-        profileDimension={data?.profileDimension}
-        coverDimension={data?.coverDimension}
-        showButton={data?.showButton}
-      />
+    <CustomCardUI
+      marginX={outerMarginX}
+      boxShadow={hasShadow}
+      height={outerHeight}
+      cardStyles={{
+        display: "flex",
+        flexDirection: "column",
+        maxHeight: "100%",
+        minHeight: "100%",
+      }}
+    >
+      <CustomBoxUI>
+        <ProfileBioImages
+          profileDimension={data?.profileDimension}
+          coverDimension={data?.coverDimension}
+          showButton={data?.showButton}
+        />
+      </CustomBoxUI>
+
       <CustomBoxUI
         customStyles={{
           display: "flex",
@@ -81,9 +95,8 @@ export const ProfileBioCard = (props: any) => {
           gap: 2,
           padding: 2,
           flexWrap: "wrap",
-          overflow: "auto",
-          flexDirection: data?.flexDirection,
           flexGrow: 1,
+          flexDirection: data?.flexDirection,
         }}
       >
         {data?.showDots && (
@@ -137,12 +150,12 @@ export const ProfileBioCard = (props: any) => {
         )}
 
         {data?.showCounts && !showAboutUs && (
-          <CustomBoxUI customStyles={{ order: data?.orderCount, flexGrow: 1 }}>
+          <CustomBoxUI customStyles={{ order: data?.orderCount }}>
             <RelationCountList relationCountListData={recordItemsListData} />
           </CustomBoxUI>
         )}
         {data?.showAboutUs && showAboutUs && (
-          <CustomBoxUI customStyles={{ order: data?.orderCount, flexGrow: 1 }}>
+          <CustomBoxUI customStyles={{ order: data?.orderCount }}>
             <CustomTypographyUI text="About Us" />
           </CustomBoxUI>
         )}
@@ -150,9 +163,6 @@ export const ProfileBioCard = (props: any) => {
           <CustomBoxUI
             customStyles={{
               order: data?.orderMediaAccounts,
-              justifySelf: "flex-end",
-              marginTop: "auto",
-              flex:1
             }}
           >
             <SocialMediaAccountsList
@@ -160,14 +170,22 @@ export const ProfileBioCard = (props: any) => {
             />
           </CustomBoxUI>
         )}
-        {data?.showBottomButtons && (
-          <CustomBoxUI
-            customStyles={{ justifySelf: "flex-end", marginTop: "auto" }}
-          >
-            <TwoRowButtons />
-          </CustomBoxUI>
-        )}
       </CustomBoxUI>
+      {data?.showBottomButtons && (
+        <CustomBoxUI
+          customStyles={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            gap: 2,
+            padding: 2,
+          }}
+        >
+          <CustomBoxUI>
+            <ProfileActionButtons />
+          </CustomBoxUI>
+        </CustomBoxUI>
+      )}
     </CustomCardUI>
   );
 };

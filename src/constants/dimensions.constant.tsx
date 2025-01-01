@@ -1,4 +1,5 @@
 export const PROFILE_AVATAR_DIMENSIONS_TYPES = {
+  
   EXTRA_SMALL: "extra-small",
   SMALL: "small",
   MEDIUM: "medium",

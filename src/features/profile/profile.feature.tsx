@@ -15,15 +15,26 @@ import { CustomCardUI } from "@/ui/custom-card/custom-card.ui";
 export const ProfileFeature = () => {
   return (
     <>
-      <ProfileBioCard
-        dimensions={PROFILE_BIO_CARD_DIMENSIONS_TYPES?.LANDSCAPE}
-      />
+      <CustomBoxUI>
+        <ProfileBioCard
+          dimensions={PROFILE_BIO_CARD_DIMENSIONS_TYPES?.LANDSCAPE}
+        />
+      </CustomBoxUI>
       <br />
       <br />
       <br />
       <br />
       <br />
-      <CustomCardUI></CustomCardUI>
+      <CustomBoxUI
+        customStyles={{
+          textAlign: "center",
+          border: "1px solid lime",
+          backgroundColor: "black",
+          p: 3,
+        }}
+      >
+        <CustomCardUI></CustomCardUI>
+      </CustomBoxUI>
       <br />
       <br />
       <br />

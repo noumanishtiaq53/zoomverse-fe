@@ -11,6 +11,7 @@ export const HexagonalCard = (props: any) => {
     zIndex,
     margin,
     border = "none",
+    display = "inline-flex",
   } = props;
 
   return (
@@ -22,10 +23,10 @@ export const HexagonalCard = (props: any) => {
         borderRadius,
         padding,
         clipPath: CLIP_PATH?.POLYGON_AVATAR,
-        display: "inline-flex",
         zIndex,
         margin,
         border,
+        display
         // position:'relative'
       }}
     >

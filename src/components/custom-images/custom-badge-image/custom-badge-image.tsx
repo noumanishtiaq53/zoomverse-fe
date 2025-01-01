@@ -10,7 +10,7 @@ export const CustomBadgeImage = (props: any) => {
   const {
     dimension = PROFILE_AVATAR_DIMENSIONS_TYPES?.EXTRA_SMALL,
     isAvatar = false,
-    avatarBgColor = "success.main",
+    avatarBgColor = "text.main",
     count = 0,
     image = " ",
     avatarInitial,
