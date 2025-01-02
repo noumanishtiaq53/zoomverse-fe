@@ -9,7 +9,13 @@ export const CustomChipUI = (props: any) => {
     label,
     variant = "filled",
     color = "primary",
+    shape = "oval",
+    borderRadius,
+    boxShadow = 25,
   } = props;
+
+  const mapBorderRadius =
+    shape === "rounded" ? 2 : shape === "oval" ? 4 : borderRadius;
 
   return (
     <Chip
@@ -18,7 +24,12 @@ export const CustomChipUI = (props: any) => {
       size={size}
       color={color}
       variant={variant}
-      sx={{ ...customStyles, "&:hover": { ...hoverStyles } }}
+      sx={{
+        borderRadius: mapBorderRadius,
+        boxShadow,
+        ...customStyles,
+        "&:hover": { ...hoverStyles },
+      }}
     />
   );
 };

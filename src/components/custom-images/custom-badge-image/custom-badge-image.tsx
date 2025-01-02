@@ -16,6 +16,7 @@ export const CustomBadgeImage = (props: any) => {
     avatarInitial,
     status,
     isHideStatus,
+    gradientBackground,
   } = props;
 
   return (
@@ -36,6 +37,7 @@ export const CustomBadgeImage = (props: any) => {
           avatarBgColor={avatarBgColor}
           image={image}
           avatarInitial={avatarInitial}
+          gradientBackground={gradientBackground}
         />
       </CustomStatusBadge>
     </CustomAvatarBadge>

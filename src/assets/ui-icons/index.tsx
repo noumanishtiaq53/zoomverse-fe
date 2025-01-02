@@ -25,3 +25,5 @@ export { default as UIPinterestIcon } from "@mui/icons-material/Pinterest";
 export { default as UIMoreHorizIcon } from "@mui/icons-material/MoreHoriz";
 export { default as UIFilterListIcon } from "@mui/icons-material/FilterList";
 export { default as UIFiberManualRecordIcon } from "@mui/icons-material/FiberManualRecord";
+export { default as UIAddIcon } from "@mui/icons-material/Add";
+export { default as UIAttachMoneyIcon } from "@mui/icons-material/AttachMoney";

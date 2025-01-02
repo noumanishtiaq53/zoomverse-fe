@@ -6,6 +6,7 @@ const common = {
   facebook: "#3763d2",
   youtube: "#fd434f",
   instagram: "#f8468d",
+  border: "#eaeaf5",
 };
 
 const primary = {
@@ -42,6 +43,10 @@ const grey = {
 
 const divider = "#eaeaf5";
 
+const action = {
+  disabledBackground: "#adafca",
+};
+
 export const palette = {
   common,
   primary,
@@ -52,4 +57,5 @@ export const palette = {
   background,
   grey,
   divider,
+  action,
 };

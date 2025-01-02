@@ -14,6 +14,7 @@ export const SocialMediaAccountsList = (props: any) => {
             key={account?._id}
             backgroundColor={account?.backgroundColor}
             padding={0.7}
+            onClick={() => console.log(account?._id)}
           >
             <CustomBoxUI
               customStyles={{

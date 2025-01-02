@@ -36,8 +36,8 @@ export const typography = {
   },
   subtitle2: {
     // for help text
-    fontSize: pxToRem(14),
-    fontWeight: 500,
+    fontSize: pxToRem(12),
+    fontWeight: 700,
   },
   body1: {
     fontSize: pxToRem(16), //used
@@ -48,8 +48,8 @@ export const typography = {
     fontWeight: 400,
   },
   caption: {
-    fontSize: pxToRem(14),
-    fontWeight: 500,
+    fontSize: pxToRem(12),
+    fontWeight: 400,
   },
   overline: {
     fontSize: pxToRem(12), //for capital text mainly for record counts

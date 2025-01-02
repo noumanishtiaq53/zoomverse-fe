@@ -1,7 +1,7 @@
 import { CustomBoxUI } from "@/ui/custom-box/custom-box.ui";
 
 export const CustomBgImage = (props: any) => {
-  const { isStaticBg = true, bgImage, height, children } = props;
+  const { isStaticBg = true, bgImage, height, children, customStyles } = props;
 
   const srcBgImage = isStaticBg ? bgImage?.src : bgImage;
 
@@ -13,6 +13,7 @@ export const CustomBgImage = (props: any) => {
         width: "100%",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        ...customStyles,
       }}
     >
       {children}

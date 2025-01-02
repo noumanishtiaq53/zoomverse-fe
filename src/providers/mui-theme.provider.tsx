@@ -1,7 +1,7 @@
 "use client";
 import { palette } from "@/theme/palette";
 import { shadows } from "@/theme/shadows";
-import { typography } from "@/theme/typograhy";
+import { typography } from "@/theme/typography";
 import { Theme } from "@emotion/react";
 import {
   CssBaseline,

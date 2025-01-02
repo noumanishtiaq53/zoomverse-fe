@@ -13,15 +13,25 @@ export const ProgressBarCard = (props: any) => {
       { image: "" },
       { image: "" },
       { image: "" },
+      { image: "" },
+      { image: "" },
+      { image: "" },
+      { image: "" },
+      { image: "" },
     ],
     name = "Social King",
     description = "You have linked at least 8 social networks to your profile",
     progress = "9/7 Completed",
+    chipLabel = "123",
+    max = 5,
   } = props;
 
+  const additionalMembers =
+    avatarsList?.length <= max ? 0 : avatarsList?.length - max + 1;
+
   return (
-    <CustomCardUI>
-      <CustomBoxUI>
+    <CustomCardUI chipLabel={chipLabel}>
+      <CustomBoxUI customStyles={{ position: "relative" }}>
         <CustomInfoImages />
       </CustomBoxUI>
       <CustomBoxUI customStyles={{ flexGrow: 1, paddingX: 2 }}>
@@ -36,9 +46,20 @@ export const ProgressBarCard = (props: any) => {
       <CustomBoxUI
         customStyles={{
           padding: 2,
+          display: "flex",
+          gap: 1,
+          alignItems: "center",
         }}
       >
-        <CustomAvatarGroupUI avatarsList={avatarsList} />
+        <CustomBoxUI>
+          <CustomAvatarGroupUI avatarsList={avatarsList} max={max} />
+        </CustomBoxUI>
+        <CustomBoxUI customStyles={{ justifySelf: "flex-end" }}>
+          {!!additionalMembers && (
+            <CustomTypographyUI text={`+${additionalMembers} friends`} />
+          )}
+          <CustomTypographyUI text={`completed this quests`} />
+        </CustomBoxUI>
       </CustomBoxUI>
     </CustomCardUI>
   );

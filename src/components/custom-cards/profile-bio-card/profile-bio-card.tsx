@@ -97,6 +97,7 @@ export const ProfileBioCard = (props: any) => {
           flexWrap: "wrap",
           flexGrow: 1,
           flexDirection: data?.flexDirection,
+          zIndex: 500,
         }}
       >
         {data?.showDots && (

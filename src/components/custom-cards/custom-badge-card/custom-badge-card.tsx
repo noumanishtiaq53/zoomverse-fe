@@ -9,10 +9,15 @@ export const CustomBadgeCard = (props: any) => {
     name = "Bronze",
     description = "Has posted more than 1 post on their profile",
     progress = "UNLOCKED",
+    chipLabel = "rwre",
   } = props;
+  
   return (
     <>
-      <CustomCardUI cardStyles={{ textAlign: "center", paddingY: 2 }}>
+      <CustomCardUI
+        chipLabel={chipLabel}
+        cardStyles={{ textAlign: "center", paddingY: 2 }}
+      >
         <CustomBoxUI>
           <CustomRowBadgesImages />
         </CustomBoxUI>
@@ -20,7 +25,7 @@ export const CustomBadgeCard = (props: any) => {
           <CustomTypographyUI text={name} variant="h5" />
           <br />
           <CustomTypographyUI text={description} variant="body2" />
-          <CustomBoxUI customStyles={{ marginY: 2 , width:'100%' }}>
+          <CustomBoxUI customStyles={{ marginY: 2, width: "100%" }}>
             <CustomLinearProgressUI value={60} />
           </CustomBoxUI>
         </CustomBoxUI>

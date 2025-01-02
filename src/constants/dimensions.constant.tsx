@@ -1,5 +1,5 @@
 export const PROFILE_AVATAR_DIMENSIONS_TYPES = {
-  
+  DOT: "dot",
   EXTRA_SMALL: "extra-small",
   SMALL: "small",
   MEDIUM: "medium",
@@ -31,6 +31,7 @@ export const PROFILE_BIO_CARD_VIEW_TYPES = {
 };
 
 export const PROFILE_AVATAR_DIMENSIONS = {
+  [PROFILE_AVATAR_DIMENSIONS_TYPES?.DOT]: { width: 25, height: 25 },
   [PROFILE_AVATAR_DIMENSIONS_TYPES?.EXTRA_SMALL]: { width: 40, height: 40 },
   [PROFILE_AVATAR_DIMENSIONS_TYPES?.SMALL]: { width: 50, height: 50 },
   [PROFILE_AVATAR_DIMENSIONS_TYPES?.MEDIUM]: { width: 70, height: 70 },
@@ -66,3 +67,6 @@ export const PROFILE_STATUS_BADGE_MARGIN = {
   [PROFILE_AVATAR_DIMENSIONS_TYPES?.MEDIUM]: 1.7,
   [PROFILE_AVATAR_DIMENSIONS_TYPES?.LARGE]: 2.5,
 };
+
+
+
