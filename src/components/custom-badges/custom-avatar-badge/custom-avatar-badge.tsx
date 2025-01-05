@@ -35,3 +35,5 @@ export const CustomAvatarBadge = (props: any) => {
     </CustomBadgeUI>
   );
 };
+
+export default CustomAvatarBadge;

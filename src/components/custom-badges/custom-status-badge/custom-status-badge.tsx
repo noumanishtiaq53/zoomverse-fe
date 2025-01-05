@@ -26,3 +26,5 @@ export const CustomStatusBadge = (props: any) => {
     </CustomBadgeUI>
   );
 };
+
+export default CustomStatusBadge;
