@@ -1,4 +1,5 @@
 "use client";
+import { CustomButtonUI } from "@/ui/custom-button/custom-button.ui";
 import { AddBox, AddCircle } from "@mui/icons-material";
 import { Button } from "@mui/material";
 
@@ -17,28 +18,27 @@ export const AddNewItemButton = (props: any) => {
     hasStartIcon = true,
     hasEndIcon = false,
     iconType = "circle",
+    size = "small",
   } = props;
 
   const MapIcon = mappedIcon?.[iconType];
 
   return (
-    <Button
+    <CustomButtonUI
       variant={variant}
       color={color}
-      disableElevation
       disabled={disabled}
       className="small"
-      size="small"
+      size={size}
       startIcon={hasStartIcon && <MapIcon />}
       endIcon={hasEndIcon && <MapIcon />}
-      onClick={() => onClick?.()}
-      sx={{
+      handleClick={() => onClick?.()}
+      customStyles={{
         "& .MuiButton-startIcon": {
           ...(!!name ? {} : { marginRight: 0, marginLeft: 0 }),
         },
       }}
-    >
-      {name}
-    </Button>
+      text={name}
+    />
   );
 };
