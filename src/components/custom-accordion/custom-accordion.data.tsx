@@ -1,12 +1,18 @@
+import { UIArrowDropDownIcon, UIExpandMoreIcon } from "@/assets/ui-icons";
 import { ACCORDION_VARIANTS } from "@/constants/ui.constant";
-import { ArrowDropDown, ExpandMore } from "@mui/icons-material";
+import { CustomIconUI } from "@/ui/custom-icon/custom-icon.ui";
 
 export const expandIcons = {
-  [ACCORDION_VARIANTS?.INHERIT]: <ArrowDropDown fontSize="large" />,
-  [ACCORDION_VARIANTS?.SECONDARY]: <ArrowDropDown fontSize="large" />,
+  [ACCORDION_VARIANTS?.INHERIT]: (
+    <CustomIconUI fontSize="large" Icon={UIArrowDropDownIcon} />
+  ),
+  [ACCORDION_VARIANTS?.SECONDARY]: (
+    <CustomIconUI fontSize="large" Icon={UIArrowDropDownIcon} />
+  ),
   [ACCORDION_VARIANTS?.TERTIARY]: (
-    <ExpandMore
-      sx={{
+    <CustomIconUI
+      Icon={UIExpandMoreIcon}
+      customStyles={{
         backgroundColor: "primary.main",
         borderRadius: 2,
         color: "common.white",
