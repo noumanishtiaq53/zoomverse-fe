@@ -1,14 +1,14 @@
 import { FLEX_DIRECTION } from "@/constants/css.constant";
-import { SKELETON_TYPES } from "@/constants/ui.constant";
+import { SKELETON_TYPES, SKELETON_VARIANTS } from "@/constants/ui.constant";
 
 const basicCardDesign = {
   gridSize: {},
-  flexDirection: "row",
+  flexDirection: FLEX_DIRECTION?.ROW,
   outerPadding: { x: 1, y: 1 },
   hasCircularSkeleton: true,
   circularSkeletonSize: { width: 50, height: 50 },
-  isCircular: "circular",
-  flexDirectionRectangular: "row",
+  isCircular: SKELETON_VARIANTS?.CIRCULAR,
+  flexDirectionRectangular: FLEX_DIRECTION?.ROW,
   hasThirdSkeleton: true,
 };
 
@@ -20,7 +20,7 @@ export const CARD_SKELETON_TYPES = {
     ...basicCardDesign,
     outerPadding: { x: 1, y: 2 },
     circularSkeletonSize: { width: 70, height: 50 },
-    isCircular: "rounded",
+    isCircular: SKELETON_VARIANTS?.ROUNDED,
     hasThirdSkeleton: false,
   },
   [SKELETON_TYPES?.LARGE_VERTICAL_THREE_LAYER_ROUNDED_CARD]: {
@@ -29,12 +29,12 @@ export const CARD_SKELETON_TYPES = {
     flexDirection: FLEX_DIRECTION?.COLUMN,
     outerPadding: { x: 2, y: 6 },
     circularSkeletonSize: { width: "100%", height: 25 },
-    isCircular: "rounded",
+    isCircular: SKELETON_VARIANTS?.ROUNDED,
     hasThirdSkeleton: false,
   },
   [SKELETON_TYPES?.VERTICAL_TWO_LAYER_SQUARE_CARD]: {
     ...basicCardDesign,
-    isCircular: "square",
+    isCircular: SKELETON_VARIANTS?.SQUARE,
     flexDirectionRectangular: FLEX_DIRECTION?.COLUMN,
     hasThirdSkeleton: false,
   },
@@ -58,7 +58,7 @@ export const CARD_SKELETON_TYPES = {
     ...basicCardDesign,
     gridSize: { md: 12 },
     outerPadding: { x: 2, y: 3 },
-    flexDirection: "row-reverse",
+    flexDirection: FLEX_DIRECTION?.ROW_REVERSE,
   },
   [SKELETON_TYPES?.TWO_LAYER_CARD]: {
     ...basicCardDesign,

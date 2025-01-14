@@ -29,7 +29,8 @@ export const ProfileFeature = () => {
       <br />
       <br />
       <CardSkeleton
-        cardType={SKELETON_TYPES?.LARGE_VERTICAL_THREE_LAYER_ROUNDED_CARD}
+        length={1}
+        cardType={SKELETON_TYPES?.TWO_LAYER_LARGE_CARD}
       />
       <br />
       <br />

@@ -54,3 +54,9 @@ export const SKELETON_TYPES = {
   TWO_LAYER_CARD: "two-layer-card",
   THREE_LAYER_LARGE_REVERSE_CARD: "three-layer-reverse-card",
 };
+
+export const SKELETON_VARIANTS = {
+  CIRCULAR: "circular",
+  ROUNDED: "rounded",
+  SQUARE: "square",
+};
