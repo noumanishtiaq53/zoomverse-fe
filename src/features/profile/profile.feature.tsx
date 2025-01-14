@@ -28,13 +28,11 @@ export const ProfileFeature = () => {
       <br />
       <br />
       <br />
-      <CardSkeleton
-        length={1}
-        cardType={SKELETON_TYPES?.TWO_LAYER_LARGE_CARD}
-      />
+      <CardSkeleton length={1} cardType={SKELETON_TYPES?.TWO_LAYER_CARD} />
       <br />
       <br />
       <br />
+      <CardSkeleton length={1} cardType={SKELETON_TYPES?.BASIC_CARD} />
       <br />
       <br />
       <br />

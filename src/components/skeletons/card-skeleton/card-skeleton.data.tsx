@@ -23,7 +23,7 @@ export const CARD_SKELETON_TYPES = {
     isCircular: SKELETON_VARIANTS?.ROUNDED,
     hasThirdSkeleton: false,
   },
-  [SKELETON_TYPES?.LARGE_VERTICAL_THREE_LAYER_ROUNDED_CARD]: {
+  [SKELETON_TYPES?.LARGE_VERTICAL_TWO_LAYER_DOUBLE_CARD]: {
     ...basicCardDesign,
     gridSize: { md: 6 },
     flexDirection: FLEX_DIRECTION?.COLUMN,
@@ -32,19 +32,13 @@ export const CARD_SKELETON_TYPES = {
     isCircular: SKELETON_VARIANTS?.ROUNDED,
     hasThirdSkeleton: false,
   },
-  [SKELETON_TYPES?.VERTICAL_TWO_LAYER_SQUARE_CARD]: {
-    ...basicCardDesign,
-    isCircular: SKELETON_VARIANTS?.SQUARE,
-    flexDirectionRectangular: FLEX_DIRECTION?.COLUMN,
-    hasThirdSkeleton: false,
-  },
   [SKELETON_TYPES?.SMALL_HORIZONTAL_TWO_LAYER_CIRCULAR_CARD]: {
     ...basicCardDesign,
     gridSize: { md: 12 },
     circularSkeletonSize: { width: 25, height: 25 },
     hasThirdSkeleton: false,
   },
-  [SKELETON_TYPES?.TWO_LAYER_LARGE_CARD]: {
+  [SKELETON_TYPES?.VERTICAL_TWO_LAYER_DOUBLE_CIRCULAR_LARGE_CARD]: {
     ...basicCardDesign,
     gridSize: { md: 12 },
     flexDirection: FLEX_DIRECTION?.COLUMN,

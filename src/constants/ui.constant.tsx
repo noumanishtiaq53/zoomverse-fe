@@ -44,12 +44,11 @@ export const SKELETON_TYPES = {
   BASIC_CARD: "basic-card",
   MEDIUM_HORIZONTAL_TWO_LAYER_ROUNDED_CARD:
     "medium-horizontal-two-layer-rounded-card",
-  LARGE_VERTICAL_THREE_LAYER_ROUNDED_CARD:
-    "large-vertical-three-layer-rounded-card",
-  VERTICAL_TWO_LAYER_SQUARE_CARD: "vertical-two-layer-square-card",
+  LARGE_VERTICAL_TWO_LAYER_DOUBLE_CARD: "large-vertical-two-layer-double-card",
   SMALL_HORIZONTAL_TWO_LAYER_CIRCULAR_CARD:
     "small-horizontal-two-layer-circular-card",
-  TWO_LAYER_LARGE_CARD: "two-layer-large-card",
+  VERTICAL_TWO_LAYER_DOUBLE_CIRCULAR_LARGE_CARD:
+    "vertical-two-layer-double-circular-large-card",
   THREE_LAYER_BIG_LARGE_CARD: "three-layer-big-large-card",
   TWO_LAYER_CARD: "two-layer-card",
   THREE_LAYER_LARGE_REVERSE_CARD: "three-layer-reverse-card",
